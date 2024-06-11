@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    ${StyledTypo.textBody({})}
+    ${StyledTypo.textBody1({})}
     color: ${APP_COLORS.black};
     background-color: ${APP_COLORS.white};
     min-height: 100vh;
