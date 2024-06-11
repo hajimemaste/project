@@ -169,12 +169,12 @@ export const StyledTypo = {
     })}
   `,
 
-  textBody3: ({ color = APP_COLORS.white }) => css`
+  textBody3: ({ color = APP_COLORS.black }) => css`
     ${StyledTypo.fontUrbanist()}
     ${StyledTypo.fontStyle({
       fontWeight: 400,
-      fontSize: APP_FONTS.sm,
-      lineHeight: 1.2,
+      fontSize: APP_FONTS.md,
+      lineHeight: "16.8px",
       textColor: color,
     })}
   `,
