@@ -1,5 +1,5 @@
 export const SCREEN_URL = {
-  HOMEPAGE: "/",
+  HOMEPAGE: "/project",
   ABOUTUSPAGE: "/about",
   PRODUCTPAGE: "/products",
   SHOWCASEPAGE: "/showcase",
