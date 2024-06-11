@@ -1,4 +1,4 @@
-# Instagram Clone Project
+# Project
 
 This project is a sales website, built with ReactJS + Vite. The project aims to learn and practice web application development skills using React.
 
