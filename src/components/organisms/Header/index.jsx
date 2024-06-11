@@ -4,7 +4,6 @@ import { CiSearch } from "react-icons/ci";
 import { APP_COLORS } from "../../../themes";
 import { StyledDisplay } from "../../../styles/mixins/StyledDisplay";
 import { StyledTypo } from "../../../styles/mixins/StyledTypo";
-import { IoSearch } from "react-icons/io5";
 import { BtnText } from "../../atoms";
 import { SearchIcon } from "../../../assets/svgs/iconSearch";
 
@@ -47,6 +46,11 @@ const StyledHeader = styled.header`
   width: 100%;
   padding: 10px 48px;
   background-color: rgba(79, 79, 79, 0.6);
+  position: fixed;
+  z-index: 1000;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.4);
+
   ${StyledDisplay.dFlex({ justify: "space-between" })};
 `;
 
