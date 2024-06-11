@@ -75,7 +75,6 @@ export const StyledTypo = {
   heading5: ({ color = APP_COLORS.black, lineHeight = "38.4px" }) => css`
     ${StyledTypo.fontUrbanist()}
     ${StyledTypo.fontStyle({
-      fontWeight,
       fontSize: APP_FONTS["3xl"],
       lineHeight,
       textColor: color,
@@ -89,7 +88,6 @@ export const StyledTypo = {
   }) => css`
     ${StyledTypo.fontUrbanist()}
     ${StyledTypo.fontStyle({
-      fontWeight,
       fontSize: APP_FONTS["2xl"],
       lineHeight,
       textColor: color,
@@ -103,7 +101,6 @@ export const StyledTypo = {
   }) => css`
     ${StyledTypo.fontUrbanist()}
     ${StyledTypo.fontStyle({
-      fontWeight,
       fontSize: APP_FONTS.xl,
       lineHeight,
       textColor: color,
@@ -128,6 +125,16 @@ export const StyledTypo = {
     ${StyledTypo.fontUrbanist()}
     ${StyledTypo.fontStyle({
       fontSize: APP_FONTS.base,
+      lineHeight,
+      textColor: color,
+    })}
+  `,
+
+  heading10: ({ color = APP_COLORS.black, lineHeight = "20px" }) => css`
+    ${StyledTypo.fontUrbanist()}
+    ${StyledTypo.fontStyle({
+      fontSize: APP_FONTS.md,
+      fontWeight: 800,
       lineHeight,
       textColor: color,
     })}
