@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { APP_COLORS } from "../../../themes";
 import { StyledTypo, StyledDisplay } from "../../../styles/mixins";
-import { ArrowUpIcon } from "../../../assets/svgs/iconArrowUp";
+import { icon } from "../../../assets/svgs";
 
 const FooterUp = (props) => {
   const scrollToTop = () => {
@@ -36,7 +36,7 @@ const FooterUp = (props) => {
           </StyledContact>
         </StyledBox>
         <StyledBtnUp onClick={scrollToTop}>
-          <ArrowUpIcon />
+          <icon.ArrowUpIcon />
         </StyledBtnUp>
       </StyledInf>
     </StyledFooterTop>

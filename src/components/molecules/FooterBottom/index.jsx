@@ -1,28 +1,25 @@
 import React from "react";
 import styled from "styled-components";
 import { StyledDisplay, StyledTypo } from "../../../styles/mixins";
-import { APP_COLORS, APP_FONTS } from "../../../themes";
+import { APP_COLORS } from "../../../themes";
 
-import { FacebookIcon } from "../../../assets/svgs/iconFacebook";
-import { InstagramIcon } from "../../../assets/svgs/iconInstagram";
-import { TwitterIcon } from "../../../assets/svgs/iconTwitter";
-import { LinkedInIcon } from "../../../assets/svgs/iconLinkedIn";
+import { icon } from "../../../assets/svgs";
 
 const FooterBottom = (props) => {
   return (
     <StyledFooterBottom>
       <StyledSocialIcon>
         <a href="#">
-          <FacebookIcon />
+          <icon.FacebookIcon />
         </a>
         <a href="#">
-          <InstagramIcon />
+          <icon.InstagramIcon />
         </a>
         <a href="#">
-          <TwitterIcon />
+          <icon.TwitterIcon />
         </a>
         <a href="#">
-          <LinkedInIcon />
+          <icon.LinkedInIcon />
         </a>
       </StyledSocialIcon>
       <StyledText>

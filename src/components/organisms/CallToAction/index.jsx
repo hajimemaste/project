@@ -6,8 +6,7 @@ import {
   StyledDisplay,
   StyledTypo,
 } from "../../../styles/mixins";
-import bottomCtaImage from "../../../assets/images/bottomCta.png";
-import bgCtaImage from "../../../assets/images/bgCta.png";
+import { image } from "../../../assets/images";
 import { InputText, BtnText } from "../../atoms";
 
 const CallToAction = (props) => {
@@ -37,7 +36,7 @@ const CallToAction = (props) => {
         </StyledForm>
       </StyledContaineCta>
       <StyledImg>
-        <img src={bottomCtaImage} alt="bottomCta" />
+        <img src={image.backGrBottomCta} alt="bottomCta" />
       </StyledImg>
     </StyledCta>
   );
@@ -49,7 +48,7 @@ const StyledCta = styled.div`
   position: relative;
   overflow: hidden;
   background-color: ${APP_COLORS.black};
-  background-image: url(${bgCtaImage});
+  background-image: url(${image.backGrCta});
   background-position-y: top center;
   background-repeat: no-repeat;
   background-size: cover;

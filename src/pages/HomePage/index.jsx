@@ -1,18 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledTypo } from "../../styles/mixins";
-import { APP_COLORS, APP_FONTS } from "../../themes";
+import { APP_COLORS } from "../../themes";
+
+import { AboutUsSection, DifferenceSection } from "../../components/molecules";
 
 const HomePage = (props) => {
   return (
-    <>
-      <StyleH1>Hello, This is HomePage </StyleH1>
-    </>
+    <StyledHomePage>
+      <AboutUsSection />
+      <DifferenceSection />
+    </StyledHomePage>
   );
 };
 
-const StyleH1 = styled.h1`
-  ${StyledTypo.heading1({})}
+const StyledHomePage = styled.div`
+  width: 100%;
+  background-color: ${APP_COLORS.black};
 `;
 
 export default HomePage;

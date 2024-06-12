@@ -1,17 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { CiSearch } from "react-icons/ci";
 import { APP_COLORS } from "../../../themes";
 import { StyledDisplay } from "../../../styles/mixins/StyledDisplay";
 import { StyledTypo } from "../../../styles/mixins/StyledTypo";
 import { BtnText } from "../../atoms";
-import { SearchIcon } from "../../../assets/svgs/iconSearch";
+import { icon } from "../../../assets/svgs";
 
 const Header = (props) => {
   return (
     <StyledHeader>
       <StyledLogo href="/">
-        <CiSearch />
+        <icon.LogoIcon />
         <p>LOGOXXXXX</p>
       </StyledLogo>
       <StyledNavigator>
@@ -30,7 +29,7 @@ const Header = (props) => {
       </StyledNavigator>
       <StyledFeat>
         <StyledSearch>
-          <SearchIcon />
+          <icon.SearchIcon />
         </StyledSearch>
         <BtnText
           title="Contact"
