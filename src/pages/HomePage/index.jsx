@@ -1,18 +1,39 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledTypo } from "../../styles/mixins";
-import { APP_COLORS, APP_FONTS } from "../../themes";
+import { APP_COLORS } from "../../themes";
+
+import {
+  AboutUsSection,
+  DifferenceSection,
+  FeatureSection,
+} from "../../components/molecules";
 
 const HomePage = (props) => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <>
-      <StyleH1>Hello, This is HomePage </StyleH1>
-    </>
+    <StyledHomePage>
+      <section id="aboutUs">
+        <AboutUsSection scrollToSection={scrollToSection} />
+      </section>
+      <section id="difference">
+        <DifferenceSection />
+      </section>
+      <section id="feature">
+        <FeatureSection />
+      </section>
+    </StyledHomePage>
   );
 };
 
-const StyleH1 = styled.h1`
-  ${StyledTypo.heading1({})}
+const StyledHomePage = styled.div`
+  width: 100%;
+  background-color: ${APP_COLORS.black};
 `;
 
 export default HomePage;
