@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { APP_COLORS } from "../../themes";
 
-import { AboutUsSection, DifferenceSection } from "../../components/molecules";
+import {
+  AboutUsSection,
+  DifferenceSection,
+  FeatureSection,
+} from "../../components/molecules";
 
 const HomePage = (props) => {
   const scrollToSection = (id) => {
@@ -19,6 +23,9 @@ const HomePage = (props) => {
       </section>
       <section id="difference">
         <DifferenceSection />
+      </section>
+      <section id="feature">
+        <FeatureSection />
       </section>
     </StyledHomePage>
   );
