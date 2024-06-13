@@ -2,7 +2,7 @@ import React from "react";
 import styled, { keyframes } from "styled-components";
 import { APP_COLORS } from "../../../themes";
 import { StyledDisplay, StyledTypo } from "../../../styles/mixins";
-import { BtnIcon } from "../../atoms";
+import { Btn } from "../../atoms";
 import { image } from "../../../assets/images/";
 import { icon } from "../../../assets/svgs";
 
@@ -18,6 +18,8 @@ to {transform: translateY(0);}
 `;
 
 const AboutUsSection = (props) => {
+  const { scrollToSection } = props;
+
   return (
     <StyledAboutUs>
       <StyledScreen />
@@ -35,16 +37,20 @@ const AboutUsSection = (props) => {
           virtual tours, and <br />
           the latest visualization technology.
         </StyledSub>
-        <BtnIcon
+        <Btn
           title="More about us"
+          isIcon={true}
           icon={<icon.ArrowUpRightIcon />}
-          padding="16.5px 22px"
+          backgroundcolor={APP_COLORS.black}
+          color={APP_COLORS.white}
+          border="linear-gradient(181.05deg, #FFD699 0.9%, rgba(0, 0, 0, 0.18) 110%)"
+          size="16px 24px"
         />
       </StyledContent>
       <StyledFeature>
         <StyledLine></StyledLine>
         <StyledBox>
-          <StyledScoll>
+          <StyledScoll onClick={() => scrollToSection("difference")}>
             <p>Scroll</p>
             <icon.ArrowDownIcon />
           </StyledScoll>
@@ -142,7 +148,7 @@ const StyledBox = styled.div`
   ${StyledDisplay.dFlex({ align: "start" })}
 `;
 
-const StyledScoll = styled.div`
+const StyledScoll = styled.button`
   width: 100%;
   padding: 24px;
   flex: 1;

@@ -1,3 +1,3 @@
-export { default as BtnText } from "./ButtonText";
 export { default as InputText } from "./InputText";
-export { default as BtnIcon } from "./ButtonIcon";
+export { default as Btn } from "./Button";
+export { default as BoxDeff } from "./BoxDeff";

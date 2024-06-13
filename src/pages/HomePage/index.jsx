@@ -5,10 +5,21 @@ import { APP_COLORS } from "../../themes";
 import { AboutUsSection, DifferenceSection } from "../../components/molecules";
 
 const HomePage = (props) => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <StyledHomePage>
-      <AboutUsSection />
-      <DifferenceSection />
+      <section id="aboutUs">
+        <AboutUsSection scrollToSection={scrollToSection} />
+      </section>
+      <section id="difference">
+        <DifferenceSection />
+      </section>
     </StyledHomePage>
   );
 };

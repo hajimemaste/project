@@ -7,7 +7,7 @@ import {
   StyledTypo,
 } from "../../../styles/mixins";
 import { image } from "../../../assets/images";
-import { InputText, BtnText } from "../../atoms";
+import { InputText, Btn } from "../../atoms";
 
 const CallToAction = (props) => {
   const [inputValue, setInputValue] = useState("");
@@ -32,7 +32,13 @@ const CallToAction = (props) => {
             value={inputValue}
             onChange={handleChange}
           />
-          <BtnText title="Get Started" padding="12px 24px" />
+          <Btn
+            title="Get Started"
+            size="12px 24px"
+            backgroundcolor="linear-gradient(89.68deg, #F1B078 -20.43%, #E3934D 6.5%, #DF8F49 32.15%, #B56824 69.73%, #685117 128.94%)"
+            color="rgba(255, 255, 255, 1)"
+            border="linear-gradient(89.68deg, #F1B078 -20.43%, #E3934D 6.5%, #DF8F49 32.15%, #B56824 69.73%, #685117 128.94%)"
+          />
         </StyledForm>
       </StyledContaineCta>
       <StyledImg>

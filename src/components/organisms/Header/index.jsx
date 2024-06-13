@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { APP_COLORS } from "../../../themes";
-import { StyledDisplay } from "../../../styles/mixins/StyledDisplay";
-import { StyledTypo } from "../../../styles/mixins/StyledTypo";
-import { BtnText } from "../../atoms";
+import { StyledDisplay, StyledTypo } from "../../../styles/mixins";
+import { Btn } from "../../atoms";
 import { icon } from "../../../assets/svgs";
 
 const Header = (props) => {
@@ -31,10 +30,11 @@ const Header = (props) => {
         <StyledSearch>
           <icon.SearchIcon />
         </StyledSearch>
-        <BtnText
+        <Btn
           title="Contact"
-          color="white"
-          bgColor="linear-gradient(89.68deg, #F1B078 -20.43%, #E3934D 6.5%, #DF8F49 32.15%, #B56824 69.73%, #685117 128.94%)"
+          color="rgba(255, 250, 244, 1)"
+          backgroundcolor="linear-gradient(89.68deg, #F1B078 -20.43%, #E3934D 6.5%, #DF8F49 32.15%, #B56824 69.73%, #685117 128.94%)"
+          border="linear-gradient(89.68deg, #F1B078 -20.43%, #E3934D 6.5%, #DF8F49 32.15%, #B56824 69.73%, #685117 128.94%)"
         />
       </StyledFeat>
     </StyledHeader>
