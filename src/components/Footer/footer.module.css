@@ -1,0 +1,7 @@
+@import "../../styles/variables.css";
+
+#footer {
+  width: 100%;
+  padding: 24px 48px;
+  background: var(--color-black);
+}

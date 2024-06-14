@@ -1,5 +1,5 @@
-export { default as HomePage } from "./HomePage";
-export { default as AboutUsPage } from "./AboutUsPage";
-export { default as ProductPage } from "./ProductPage";
-export { default as ShowcasePage } from "./ShowcasePage";
-export { default as SolutionPage } from "./SolutionPage";
+export { default as Home } from "./Home";
+export { default as AboutUs } from "./AboutUs";
+export { default as Product } from "./Product";
+export { default as Showcase } from "./Showcase";
+export { default as Solution } from "./Solution";

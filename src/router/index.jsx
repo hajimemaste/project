@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { layoutRoutes } from "../configs";
-import LayoutContainer from "../components/organisms/LayoutContainer";
+import LayoutContainer from "../components/LayoutContainer";
 
 const AppRouter = () => {
   return (

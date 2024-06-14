@@ -1,0 +1,86 @@
+/* global.css */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
+@import "./variables.css";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+  color: var(--color-white);
+  background-color: var(--color-black);
+  min-height: 100vh;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+}
+
+a,
+button,
+input {
+  border: 0;
+  outline: 0;
+  color: inherit;
+}
+
+li,
+ol {
+  list-style: none;
+}
+
+.container {
+  max-width: var(--size-xl);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container.md {
+  max-width: var(--size-lg);
+}
+
+.container.sm {
+  max-width: var(--size-sm);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--color-white);
+}

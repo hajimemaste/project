@@ -1,0 +1,17 @@
+.input_text {
+  padding: 12px 20px;
+  border: 1px solid #df8f49;
+  border-radius: 8px;
+  width: 311px;
+  height: 44px;
+  background-color: #00000033;
+
+  &::placeholder {
+    font-family: Aeonik;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #666666;
+  }
+}

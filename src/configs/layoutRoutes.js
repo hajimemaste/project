@@ -1,48 +1,42 @@
 import { SCREEN_URL } from "../constants/index";
-import {
-  HomePage,
-  AboutUsPage,
-  ProductPage,
-  ShowcasePage,
-  SolutionPage,
-} from "../pages";
+import { Home, AboutUs, Product, Showcase, Solution } from "../pages";
 
 export const layoutRoutes = [
   {
-    path: SCREEN_URL.HOMEPAGE,
-    component: HomePage,
+    path: SCREEN_URL.HOME,
+    component: Home,
     isHeader: true,
     isCta: true,
     isFooter: true,
     title: "Home",
   },
   {
-    path: SCREEN_URL.ABOUTUSPAGE,
-    component: AboutUsPage,
+    path: SCREEN_URL.ABOUTUS,
+    component: AboutUs,
     isHeader: true,
     isCta: true,
     isFooter: true,
     title: "About Us",
   },
   {
-    path: SCREEN_URL.PRODUCTPAGE,
-    component: ProductPage,
+    path: SCREEN_URL.PRODUCT,
+    component: Product,
     isHeader: true,
     isCta: true,
     isFooter: true,
     title: "Products",
   },
   {
-    path: SCREEN_URL.SHOWCASEPAGE,
-    component: ShowcasePage,
+    path: SCREEN_URL.SHOWCASE,
+    component: Showcase,
     isHeader: true,
     isCta: true,
     isFooter: true,
     title: "Showcase",
   },
   {
-    path: SCREEN_URL.SOLUTIONPAGE,
-    component: SolutionPage,
+    path: SCREEN_URL.SOLUTION,
+    component: Solution,
     isHeader: true,
     isCta: true,
     isFooter: true,

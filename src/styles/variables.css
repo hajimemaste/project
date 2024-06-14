@@ -1,0 +1,12 @@
+/* variables.css */
+:root {
+  --color-black: rgba(17, 17, 17, 1);
+  --color-gray-light: #4f4f4f;
+  --color-white: rgba(255, 255, 255, 1);
+  --color-transparent: transparent;
+  --color-beige: #ffd699;
+
+  --size-xl: 1460px;
+  --size-lg: 992px;
+  --size-sm: 576px;
+}

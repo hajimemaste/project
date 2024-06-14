@@ -1,0 +1,29 @@
+@import "../../../styles/variables.css";
+
+.btn {
+  padding: var(--btn-padding, 10px);
+  background: var(--btn-background, var(--color-black));
+  border: none;
+  position: relative;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem; /* Assuming heading9 size */
+  color: var(--btn-color, var(--color-white));
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  height: 107%;
+  width: 102%;
+  border-radius: 4px;
+  background-image: var(--btn-border, var(--color-black));
+  z-index: -1;
+}
+
+.btn:hover {
+  z-index: 0;
+}

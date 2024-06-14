@@ -4,6 +4,7 @@ import backGrBottomCta from "./bottomCta.png";
 import backGrDeff from "./backGrDeff.gif";
 import imgFeat1 from "./imgFeature-1.gif";
 import imgFeat2 from "./imgFeature-2.gif";
+import imgExclude from "./imgExclude.png";
 
 export const image = {
   backGrHomePage,
@@ -12,4 +13,5 @@ export const image = {
   backGrDeff,
   imgFeat1,
   imgFeat2,
+  imgExclude,
 };
