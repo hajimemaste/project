@@ -17,6 +17,11 @@ import { IntIcon2 } from "./iconInt2";
 import { IntIcon3 } from "./iconInt3";
 import { IntIcon4 } from "./iconInt4";
 import { IntIcon5 } from "./iconInt5";
+import { ArrowLeftIcon } from "./iconArrowLeft";
+import { ArrowRightIcon } from "./iconArrowRight";
+import { EmailIcon } from "./iconEmail";
+import { LocationIcon } from "./iconLocation";
+import { PhoneIcon } from "./iconPhone";
 
 export const icon = {
   ArrowDownIcon,
@@ -37,4 +42,10 @@ export const icon = {
   IntIcon2,
   IntIcon3,
   IntIcon4,
+  IntIcon5,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  EmailIcon,
+  LocationIcon,
+  PhoneIcon,
 };

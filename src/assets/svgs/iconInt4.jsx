@@ -14,7 +14,7 @@ export const IntIcon4 = (props) => {
         stroke="#FFFAF4"
         strokeOpacity="0.87"
         strokeWidth="1.64778"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6.5 8.85156H10.8941"

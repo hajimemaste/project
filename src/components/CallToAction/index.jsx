@@ -11,7 +11,7 @@ const CallToAction = (props) => {
   };
 
   return (
-    <div className={styles.footer}>
+    <div className={styles.cta}>
       <div className={styles.box}>
         <div className={styles.content}>
           <h2 className={styles.header}>Get started with XXXXXXX</h2>

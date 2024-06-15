@@ -1,10 +1,17 @@
 import React from "react";
+import styles from "./aboutUs.module.css";
+import { IntroSection, FormSection } from "../../components/AboutUs";
 
 const AboutUsPage = (props) => {
   return (
-    <>
-      <h1>Hello, This is AboutUsPage</h1>
-    </>
+    <div id={styles.aboutUs}>
+      <section id="aboutUs">
+        <IntroSection />
+      </section>
+      <section id="form">
+        <FormSection />
+      </section>
+    </div>
   );
 };
 

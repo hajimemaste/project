@@ -14,7 +14,7 @@ export const layoutRoutes = [
     path: SCREEN_URL.ABOUTUS,
     component: AboutUs,
     isHeader: true,
-    isCta: true,
+    isCta: false,
     isFooter: true,
     title: "About Us",
   },

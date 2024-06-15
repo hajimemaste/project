@@ -5,6 +5,9 @@ import {
   AboutUsSection,
   DifferenceSection,
   FeatureSection,
+  InteractiveSection,
+  ShowcaseSection,
+  MemberSection,
 } from "../../components/Home";
 
 const Home = (props) => {
@@ -25,6 +28,15 @@ const Home = (props) => {
       </section>
       <section id="feature">
         <FeatureSection />
+      </section>
+      <section id="interactive">
+        <InteractiveSection />
+      </section>
+      <section id="showcase">
+        <ShowcaseSection />
+      </section>
+      <section id="member">
+        <MemberSection />
       </section>
     </div>
   );
