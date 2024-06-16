@@ -1,0 +1,69 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  padding: 0 48px;
+  background-image: url(../../assets/images/light.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  position: relative;
+}
+
+.header {
+  opacity: 0.3;
+  position: absolute;
+  top: 275px;
+  left: 160px;
+
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  gap: 66px;
+  align-items: center;
+}
+
+.navigation {
+  padding-top: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+
+  button {
+    padding: 10px 14px;
+    border: 1px solid rgba(255, 250, 244, 1);
+    border-radius: 999px;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+  }
+}
+
+.carousel_container {
+  height: 100%;
+
+  overflow: visible;
+}
+
+.carousel_card {
+  width: 100%;
+  height: 480px;
+  position: static;
+
+  margin-bottom: 140px;
+
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}

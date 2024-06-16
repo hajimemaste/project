@@ -1,0 +1,52 @@
+.card {
+  opacity: 1;
+  transform: translateY(294px);
+  transition: opacity 0.5s ease;
+  transition: transform 0.5s ease;
+  position: relative;
+
+  display: flex;
+  gap: 32px;
+
+  h1 {
+    width: 500px;
+    position: absolute;
+    left: 0;
+    top: 120px;
+    z-index: 99;
+
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 57.6px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  p {
+    width: 341px;
+    padding-top: 275px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  img {
+    width: 820px;
+    height: 480px;
+  }
+}
+
+.action {
+  opacity: 0.3;
+
+  img {
+    filter: blur(8px);
+  }
+}
+
+.action_Old {
+  transform: translateY(-500px);
+  transform: translateX(100px);
+}

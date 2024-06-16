@@ -22,6 +22,7 @@ import { ArrowRightIcon } from "./iconArrowRight";
 import { EmailIcon } from "./iconEmail";
 import { LocationIcon } from "./iconLocation";
 import { PhoneIcon } from "./iconPhone";
+import { PlayIcon } from "./iconPlay";
 
 export const icon = {
   ArrowDownIcon,
@@ -48,4 +49,5 @@ export const icon = {
   EmailIcon,
   LocationIcon,
   PhoneIcon,
+  PlayIcon,
 };

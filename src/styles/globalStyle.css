@@ -70,3 +70,7 @@ ol {
   border-radius: 10px;
   background: var(--color-white);
 }
+
+.slick-list {
+  height: 100% !important;
+}

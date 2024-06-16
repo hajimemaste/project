@@ -15,6 +15,14 @@ import avatar_3 from "./ava-3.png";
 import avatar_4 from "./ava-4.png";
 import avatar_5 from "./ava-5.png";
 import avatar_6 from "./ava-6.png";
+import imgShowcase_2 from "./imgShowcase2.gif";
+import imgShowcase_3 from "./imgShowcase3.gif";
+import customer_1 from "./customer_1.png";
+import customer_2 from "./customer_2.png";
+import customer_3 from "./customer_3.png";
+import customer_4 from "./customer_4.png";
+import customer_5 from "./customer_5.png";
+import bgProduct from "./bgProduct.png";
 
 export const image = {
   backGrHomePage,
@@ -34,4 +42,12 @@ export const image = {
   avatar_4,
   avatar_5,
   avatar_6,
+  imgShowcase_2,
+  imgShowcase_3,
+  customer_1,
+  customer_2,
+  customer_3,
+  customer_4,
+  customer_5,
+  bgProduct,
 };

@@ -19,6 +19,7 @@
   justify-content: space-between;
   align-items: start;
   text-transform: uppercase;
+  overflow: hidden;
 
   h1 {
     font-size: 60px;
@@ -46,6 +47,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 
   h2 {
     font-size: 24px;
