@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./footerBottom.module.css";
-
 import { icon } from "../../../assets/svgs";
 
 const FooterBottom = (props) => {
@@ -23,8 +22,8 @@ const FooterBottom = (props) => {
       <div className={styles.content}>
         <p>© 2024 xxxxxxxxx. All rights reserved</p>
         <div className={styles.text}>
-          <p>Privacy Policy</p>
-          <p>Terms of Service</p>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
         </div>
       </div>
     </div>
