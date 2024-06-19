@@ -1,0 +1,152 @@
+.container {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  position: absolute;
+}
+
+.box {
+  display: flex;
+  gap: 78px;
+
+  position: absolute;
+  top: 343.25px;
+  left: 971.84px;
+}
+
+.box_line {
+  display: flex;
+  gap: 20px;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.2px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 250, 244, 1);
+  border-radius: 999px;
+}
+
+.content {
+  padding: 25px 36px;
+
+  height: 205px;
+  width: 341px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+
+  position: relative;
+  z-index: 1999;
+}
+
+.content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  z-index: -1;
+  border-radius: 10px;
+
+  clip-path: polygon(
+    0 24%,
+    14% 0,
+    100% 0,
+    100% 100%,
+    54% 100%,
+    39% 75%,
+    0 75%,
+    0 41%
+  );
+  backdrop-filter: blur(10px);
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justified;
+}
+
+.btn {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  z-index: 9999;
+}
+
+.btn_text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: justified;
+}
+
+.line {
+  width: 400px;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  top: 200px;
+  right: 70px;
+}
+
+.content_1 {
+  top: 609.62px;
+  left: 167px;
+}
+
+.content_2 {
+  top: 609.62px;
+  left: 253.32px;
+}
+
+.content_3 {
+  top: 609.62px;
+  left: 288px;
+}
+
+.content_4 {
+  top: 609.62px;
+  left: 542px;
+}
+
+.action_line {
+  animation: actionLine 1s ease-in;
+}
+
+.action {
+  opacity: 1;
+  animation: opacity 1s ease;
+}
+
+@keyframes actionLine {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  100% {
+    opacity: 1;
+    width: 400px;
+  }
+}

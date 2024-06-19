@@ -23,6 +23,9 @@ import customer_3 from "./customer_3.png";
 import customer_4 from "./customer_4.png";
 import customer_5 from "./customer_5.png";
 import bgProduct from "./bgProduct.png";
+import imgProduct_1 from "./imgProduct_1.gif";
+import imgProduct_2 from "./imgProduct_2.gif";
+import imgProduct_3 from "./imgProduct_3.gif";
 
 export const image = {
   backGrHomePage,
@@ -50,4 +53,7 @@ export const image = {
   customer_4,
   customer_5,
   bgProduct,
+  imgProduct_1,
+  imgProduct_2,
+  imgProduct_3,
 };
