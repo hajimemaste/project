@@ -1,19 +1,64 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Btn, BoxDiff } from "../../atoms";
 import { icon } from "../../../assets/svgs";
 import styles from "./differenceSection.module.css";
 
 const DifferenceSection = (props) => {
+  const [scrolledHeader, setScrolledHeader] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const viewportHeight = window.innerHeight;
+
+      const scrollThresholdHeader = 500;
+
+      const scrollThreshold = 800;
+
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= scrollThreshold) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+
+      if (scrollPosition >= scrollThresholdHeader) {
+        setScrolledHeader(true);
+      } else {
+        setScrolledHeader(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.box_left}>
-        <h2 className={styles.header}>
+        <h2
+          className={`${styles.header} ${
+            scrolledHeader ? styles.action_right : styles.action_right_close
+          }`}
+        >
           We do things <span>differently</span>
         </h2>
-        <div className={styles.img}></div>
+        <div
+          className={`${styles.img} ${
+            scrolled ? styles.action_right : styles.action_right_close
+          }`}
+        ></div>
       </div>
       <div className={styles.box_right}>
-        <div className={styles.content}>
+        <div
+          className={`${styles.content} ${
+            scrolledHeader ? styles.action_left : styles.action_left_close
+          }`}
+        >
           <Btn
             title="Explore details"
             isIcon={true}
@@ -37,28 +82,48 @@ const DifferenceSection = (props) => {
         </div>
         <div className={styles.list_box}>
           <div className={styles.box}>
-            <BoxDiff
-              header="Creative"
-              sub="Engaging, cross-platform applications for modern "
-              icon={<icon.CreativeIcon />}
-            />
-            <BoxDiff
-              header="Develop"
-              sub="Lorem ipsum dolor sit amet consectetur. Sollicitudin "
-              icon={<icon.DevelopIcon />}
-            />
+            <div
+              className={scrolled ? styles.action_up : styles.action_up_close}
+              style={{ "--value": "100px" }}
+            >
+              <BoxDiff
+                header="Creative"
+                sub="Engaging, cross-platform applications for modern "
+                icon={<icon.CreativeIcon />}
+              />
+            </div>
+            <div
+              className={scrolled ? styles.action_up : styles.action_up_close}
+              style={{ "--value": "150px" }}
+            >
+              <BoxDiff
+                header="Develop"
+                sub="Lorem ipsum dolor sit amet consectetur. Sollicitudin "
+                icon={<icon.DevelopIcon />}
+              />
+            </div>
           </div>
           <div className={styles.box}>
-            <BoxDiff
-              header="Techical"
-              sub="Lorem ipsum dolor sit amet consectetur. "
-              icon={<icon.TechicalIcon />}
-            />
-            <BoxDiff
-              header="Client driven"
-              sub="Lorem ipsum dolor sit amet consectetur. Sollicitudin "
-              icon={<icon.ClientDrivenIcon />}
-            />
+            <div
+              className={scrolled ? styles.action_up : styles.action_up_close}
+              style={{ "--value": "200px" }}
+            >
+              <BoxDiff
+                header="Techical"
+                sub="Lorem ipsum dolor sit amet consectetur. "
+                icon={<icon.TechicalIcon />}
+              />
+            </div>
+            <div
+              className={scrolled ? styles.action_up : styles.action_up_close}
+              style={{ "--value": "250px" }}
+            >
+              <BoxDiff
+                header="Client driven"
+                sub="Lorem ipsum dolor sit amet consectetur. Sollicitudin "
+                icon={<icon.ClientDrivenIcon />}
+              />
+            </div>
           </div>
         </div>
       </div>

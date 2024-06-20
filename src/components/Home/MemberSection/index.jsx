@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./memberSection.module.css";
 
 import { image } from "../../../assets/images";
@@ -14,17 +14,49 @@ const MemberSection = (props) => {
     { avatar: `${image.avatar_6}`, name: "Jane Cooper", position: "Staff" },
   ];
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const viewportHeight = window.innerHeight;
+
+      const scrollThreshold = viewportHeight * 4 + 300;
+
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= scrollThreshold) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className={styles.container}>
-      <div className={styles.card}>
+      <div
+        className={`${styles.card} ${scrolled ? styles.action : styles.close}`}
+        style={{ "--translate-value": "100px" }}
+      >
         <h1 className={styles.header}>Our Team</h1>
         <p className={styles.sub}>Lorem ipsum dolor sit amet consectetur.</p>
       </div>
       {members.map((member, index) => (
         <div
-          className={styles.card_member}
+          className={`${styles.card_member} ${
+            scrolled ? styles.action : styles.close
+          }`}
           key={index}
-          style={{ backgroundImage: `url(${member.avatar})` }}
+          style={{
+            backgroundImage: `url(${member.avatar})`,
+            "--translate-value": `${100 + (index + 1) * 100}px`,
+          }}
         >
           <div className={styles.box}>
             <h3 className={styles.name}>{member.name}</h3>
@@ -32,7 +64,10 @@ const MemberSection = (props) => {
           </div>
         </div>
       ))}
-      <div className={styles.card} style={{ alignItems: "end" }}>
+      <div
+        className={`${styles.card} ${scrolled ? styles.action : styles.close}`}
+        style={{ alignItems: "end", "--translate-value": "800px" }}
+      >
         <div className={styles.content_box}>
           <h2 className={styles.content_header}>
             Join the <br />

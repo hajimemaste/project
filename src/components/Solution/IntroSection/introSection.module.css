@@ -88,3 +88,37 @@
     }
   }
 }
+
+/* Animation up */
+
+.action_up {
+  animation: slideUp 1s ease;
+}
+
+.action_up_close {
+  animation: slideUpClose 1s ease;
+  transform: translateY(-200px);
+  opacity: 0.5;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(-200px);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUpClose {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-200px);
+    opacity: 0.5;
+  }
+}

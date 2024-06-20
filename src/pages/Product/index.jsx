@@ -106,10 +106,16 @@ const Product = (props) => {
       </div>
 
       <div className={styles.btn_arrow}>
-        <button className={styles.arrow_left}>
+        <button
+          className={styles.arrow_left}
+          onClick={() => sliderRef.current.slickNext()}
+        >
           <icon.ArrowLeftIcon />
         </button>
-        <button className={styles.arrow_right}>
+        <button
+          className={styles.arrow_right}
+          onClick={() => sliderRef.current.slickPrev()}
+        >
           <icon.ArrowRightIcon />
         </button>
       </div>
@@ -142,6 +148,7 @@ const Product = (props) => {
                 content={item.content}
                 feat_1={item.feat_1}
                 feat_2={item.feat_2}
+                isSelect={currentSlide === index}
               />
             )}
           </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { image } from "../../assets/images";
 import { InputText, Btn } from "../atoms";
 import styles from "./callToAction.module.css";
@@ -10,9 +10,42 @@ const CallToAction = (props) => {
     setInputValue(event.target.value);
   };
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const viewportHeight = window.innerHeight;
+      const scrollPosition = window.scrollY;
+      const totalHeight = document.documentElement.scrollHeight;
+      const scrollFromBottom = totalHeight - scrollPosition - viewportHeight;
+
+      const scrollThreshold = viewportHeight - 500;
+
+      if (scrollFromBottom <= scrollThreshold) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={styles.cta}>
-      <div className={styles.box}>
+    <div
+      className={`${styles.cta} ${
+        scrolled ? styles.action_opacity : styles.action_opacity_close
+      }`}
+    >
+      <div
+        className={`${styles.box} ${
+          scrolled ? styles.action_up : styles.action_up_close
+        }`}
+      >
         <div className={styles.content}>
           <h2 className={styles.header}>Get started with XXXXXXX</h2>
           <p className={styles.sub}>
