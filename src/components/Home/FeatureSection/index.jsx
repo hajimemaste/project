@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
 import styles from "./featureSection.module.css";
@@ -43,37 +43,72 @@ const FeatureSection = (props) => {
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
+  const [scrolled, setScrolled] = useState(false);
 
   const handleClick = (index) => {
-    setActiveIndex(index === activeIndex ? null : index);
+    if (activeIndex != index) {
+      setActiveIndex(index);
+    }
   };
 
+  useEffect(() => {
+    function handleScroll() {
+      const viewportHeight = window.innerHeight;
+
+      const scrollThreshold = viewportHeight * 3 - 400;
+
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= scrollThreshold) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${
+        scrolled ? styles.action_opacity_close : styles.action_opacity
+      }`}
+    >
       {listFeature.map((feature, index) => (
         <div
           className={styles.item}
           key={feature.id}
           style={feature.id === 5 ? { border: "none" } : null}
         >
-          <div className={styles.header} onClick={() => handleClick(index)}>
+          <div
+            className={styles.header}
+            onClick={() => {
+              handleClick(index);
+            }}
+          >
             <p className={styles.id}>0{feature.id}</p>
             <h1>{feature.header}</h1>
             <icon.ArrowUpRightIcon />
           </div>
-          {activeIndex === index && (
-            <div className={styles.box_content}>
-              <p className={styles.content}>{feature.sub}</p>
-              <div className={styles.list_img}>
-                <div className={styles.img_1}>
-                  <img src={feature.img1} alt="" />
-                </div>
-                <div className={styles.img_2}>
-                  <img src={feature.img2} alt="" />
-                </div>
+          <div
+            className={`${styles.box_content} 
+              ${activeIndex !== index ? styles.close : styles.open}`}
+          >
+            <p className={styles.content}>{feature.sub}</p>
+            <div className={styles.list_img}>
+              <div className={styles.img_1}>
+                <img src={feature.img1} alt="" />
+              </div>
+              <div className={styles.img_2}>
+                <img src={feature.img2} alt="" />
               </div>
             </div>
-          )}
+          </div>
         </div>
       ))}
     </div>

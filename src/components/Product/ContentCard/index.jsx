@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./contentCard.module.css";
 import { icon } from "../../../assets/svgs";
 
-const ContentCard = ({ id, content, feat_1, feat_2 }) => {
+const ContentCard = ({ id, content, feat_1, feat_2, isSelect }) => {
+  console.log("id: ", id, "isSelect: ", isSelect);
   return (
     <div className={styles.container}>
-      <div className={styles.box}>
+      <div className={`${styles.box} ${isSelect && styles.action}`}>
         <div className={styles.box_line}>
           <div className={styles.dot}></div>
           <p>{feat_1}</p>
@@ -24,7 +25,7 @@ const ContentCard = ({ id, content, feat_1, feat_2 }) => {
             : id == 4
             ? styles.content_4
             : styles.content_1
-        }`}
+        } ${isSelect && styles.action}`}
       >
         <p className={styles.text}>{content}</p>
         <button className={styles.btn}>
@@ -33,7 +34,7 @@ const ContentCard = ({ id, content, feat_1, feat_2 }) => {
         </button>
         <div className={styles.content_box}></div>
       </div>
-      <div className={styles.line}></div>
+      <div className={`${styles.line} ${isSelect && styles.action_line}`}></div>
     </div>
   );
 };

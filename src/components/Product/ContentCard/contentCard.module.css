@@ -84,6 +84,7 @@
 }
 
 .btn {
+  opacity: 0;
   display: flex;
   gap: 14px;
   align-items: center;
@@ -131,12 +132,11 @@
 }
 
 .action_line {
-  animation: actionLine 1s ease-in;
+  animation: actionLine 2s ease;
 }
 
 .action {
-  opacity: 1;
-  animation: opacity 1s ease;
+  animation: action 2s ease-in;
 }
 
 @keyframes actionLine {
@@ -148,5 +148,17 @@
   100% {
     opacity: 1;
     width: 400px;
+  }
+}
+
+@keyframes action {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

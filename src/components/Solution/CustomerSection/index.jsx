@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./customerSection.module.css";
 import { image } from "../../../assets/images";
 import Card from "./Card";
@@ -32,9 +32,53 @@ const CustomerSection = (props) => {
     },
   ];
 
+  const [scrolled, setScrolled] = useState(false);
+  const [scrolledItem, setScrolledItem] = useState(null);
+  const [scrolledClose, setScrolledClose] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const viewportHeight = window.innerHeight;
+
+      const scrollThreshold = viewportHeight * 2 + 500;
+
+      const scrollThresholdClose = viewportHeight * 4 - 600;
+
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= scrollThreshold) {
+        setScrolled(true);
+        setScrolledItem(true);
+      } else {
+        setScrolled(false);
+      }
+
+      if (scrollPosition >= scrollThresholdClose) {
+        setScrolledClose(true);
+        setScrolledItem(false);
+      } else {
+        setScrolledClose(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className={styles.container}>
-      <div className={styles.header}>
+    <div
+      className={`${styles.container} ${
+        scrolledClose ? styles.action_close_opacity : styles.action_open_opacity
+      }`}
+    >
+      <div
+        className={`${styles.header} ${
+          scrolled ? styles.action_up : styles.action_up_close
+        }`}
+      >
         <h1> What do customers say about us?</h1>
         <p className={styles.sub}>
           Lorem ipsum dolor sit amet consectetur. Sit in eget arcu ac aenean
@@ -47,7 +91,19 @@ const CustomerSection = (props) => {
         {customers.map((customer, index) => (
           <div
             key={index}
-            style={{ transform: index % 2 !== 0 ? "translateY(100px)" : null }}
+            className={`${
+              index % 2 !== 0
+                ? scrolledClose
+                  ? styles.action_upImg
+                  : styles.action_upImg_close
+                : null
+            } ${
+              index % 2 === 0
+                ? scrolled
+                  ? styles.action_opacity
+                  : styles.action_opacity_close
+                : null
+            }`}
           >
             <Card
               avatar={customer.avatar}

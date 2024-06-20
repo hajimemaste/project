@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 108px;
   align-items: center;
+  overflow: hidden;
 }
 
 .header {
@@ -146,5 +147,110 @@
 
   img {
     width: 100%;
+  }
+}
+
+/* Animation Left */
+
+.action_left {
+  animation: slideLeft 1s ease-in;
+}
+
+.action_left_close {
+  animation: slideLeftClose 1s ease-in;
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeftClose {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Animation zoom */
+
+.action_zoom {
+  animation: slideZoom 1s ease;
+}
+
+.action_zoom_close {
+  animation: slideZoomClose 1s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes slideZoom {
+  from {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideZoomClose {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Animation opacity */
+
+.action_opacity {
+  animation: slideOpacity 1s ease-in;
+}
+
+.action_opacity_close {
+  animation: slideOpacityClose 1s ease-in;
+  opacity: 0;
+}
+
+@keyframes slideOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOpacityClose {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
   }
 }

@@ -1,9 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./showcaseSection.module.css";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
 
 const ShowcaseSection = (props) => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const viewportHeight = window.innerHeight;
+
+      const scrollThreshold = viewportHeight * 4.5;
+
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= scrollThreshold) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const slides = [
     {
       header: "Lorem ipsum dolor sit amet consectetur. ",
@@ -91,7 +115,11 @@ const ShowcaseSection = (props) => {
             </button>
           </div>
         </div>
-        <div className={styles.content_img}>
+        <div
+          className={`${styles.content_img} ${
+            scrolled ? styles.scrolled : styles.zoom
+          }`}
+        >
           <img src={image.bgShowcase} alt="" className={styles.bgShowcase} />
           <img src={image.imgLaptop} alt="" className={styles.imgLaptop} />
           <div className={styles.content_gif}>

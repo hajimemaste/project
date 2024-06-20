@@ -45,7 +45,7 @@
   padding: 17px 45px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
 
   display: flex;
   flex-direction: column;
@@ -144,4 +144,119 @@
   font-weight: 400;
   line-height: 19.2px;
   text-align: center;
+}
+
+/* Animation Opacity */
+
+.action_opacity {
+  animation: slideOpacity 1s ease-in;
+}
+
+.action_opacity_close {
+  animation: slideOpacityClose 1s ease-in;
+  opacity: 0;
+}
+
+@keyframes slideOpacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOpacityClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animation height background */
+
+.action_background {
+  animation: slideBackground 1s ease;
+}
+
+.action_background::before {
+  animation: slideOpacity 1s ease-in;
+}
+
+.action_background_close {
+  animation: slideBackgroundClose 1s ease;
+  background-size: 100% var(--height);
+  opacity: 0.5;
+}
+
+.action_background_close::before {
+  animation: slideOpacityClose 1s ease-in;
+  opacity: 0;
+}
+
+@keyframes slideBackground {
+  from {
+    opacity: 0.5;
+    background-size: 100% var(--height);
+  }
+  to {
+    opacity: 1;
+    background-size: 100% 100%;
+  }
+}
+
+@keyframes slideBackgroundClose {
+  from {
+    opacity: 1;
+    background-size: cover;
+  }
+  to {
+    opacity: 0.5;
+    background-size: 100% var(--height);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animation Close */
+
+.action_close {
+  animation: slideClose 1s ease-in;
+  opacity: 0.5;
+  transform: translateY(-50px);
+}
+
+.action_open {
+  animation: slideOpen 1s ease-in;
+}
+
+@keyframes slideClose {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.5;
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes slideOpen {
+  from {
+    opacity: 0.5;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
