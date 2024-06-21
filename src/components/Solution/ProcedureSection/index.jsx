@@ -1,54 +1,19 @@
 import React, { useEffect, useState } from "react";
 import styles from "./procedureSection.module.css";
+import useScrollEffect from "./useScrollEffect";
 
 const ProcedureSection = (props) => {
-  const [scrolledBg, setScrolledBg] = useState(false);
-  const [scrolledHeader, setScrolledHeader] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThresholdHeader = 300;
-
-      const scrollThreshold = 800;
-
-      const scrollThresholdBg = viewportHeight + 200;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThresholdHeader) {
-        setScrolledHeader(true);
-      } else {
-        setScrolledHeader(false);
-      }
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
-      if (scrollPosition >= scrollThresholdBg) {
-        setScrolledBg(true);
-      } else {
-        setScrolledBg(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, scrolledHeader, scrolledClose, sectionRef } =
+    useScrollEffect();
 
   return (
     <div
       className={`${styles.container} ${
-        scrolledBg ? styles.action_background : styles.action_background_close
+        scrolledClose
+          ? styles.action_background
+          : styles.action_background_close
       }`}
+      ref={sectionRef}
     >
       <div className={styles.header}>
         <h1

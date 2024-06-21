@@ -2,33 +2,13 @@ import React, { useState, useEffect } from "react";
 import styles from "./introSection.module.css";
 import { icon } from "../../../assets/svgs";
 
+import useScrollEffect from "./useScrollEffect";
+
 const IntroSection = (props) => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThreshold = 500;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, sectionRef } = useScrollEffect();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={sectionRef}>
       <h1 className={styles.header}>Lorem ipsum dolor sit amet consectetur.</h1>
       <div
         className={`${styles.content} ${

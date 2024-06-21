@@ -1,33 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./showcaseSection.module.css";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
+import useScrollEffect from "./useScrollEffect";
 
 const ShowcaseSection = (props) => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThreshold = viewportHeight * 4.5;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const slides = [
     {
       header: "Lorem ipsum dolor sit amet consectetur. ",
@@ -61,6 +38,8 @@ const ShowcaseSection = (props) => {
     },
   ];
 
+  const { scrolled, scrolledHeader, sectionRef } = useScrollEffect();
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const goToPrevious = () => {
@@ -80,10 +59,20 @@ const ShowcaseSection = (props) => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.header}>Show case</h1>
+    <div className={styles.container} ref={sectionRef}>
+      <h1
+        className={`${styles.header} ${
+          scrolledHeader ? styles.action_opacity : styles.action_opacity_close
+        }`}
+      >
+        Show case
+      </h1>
       <div className={styles.content}>
-        <div className={styles.slider}>
+        <div
+          className={`${styles.slider} ${
+            scrolled ? styles.action_right : styles.action_right_close
+          }`}
+        >
           <div className={styles.card}>
             <div className={styles.card_header}>
               <h2>{slides[currentIndex].header}</h2>
@@ -117,7 +106,7 @@ const ShowcaseSection = (props) => {
         </div>
         <div
           className={`${styles.content_img} ${
-            scrolled ? styles.scrolled : styles.zoom
+            scrolled ? styles.action_zoom : styles.action_zoom_close
           }`}
         >
           <img src={image.bgShowcase} alt="" className={styles.bgShowcase} />

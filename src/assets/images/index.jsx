@@ -26,6 +26,7 @@ import bgProduct from "./bgProduct.png";
 import imgProduct_1 from "./imgProduct_1.gif";
 import imgProduct_2 from "./imgProduct_2.gif";
 import imgProduct_3 from "./imgProduct_3.gif";
+import bgAboutUs from "./bgAboutUs.png";
 
 export const image = {
   backGrHomePage,
@@ -56,4 +57,5 @@ export const image = {
   imgProduct_1,
   imgProduct_2,
   imgProduct_3,
+  bgAboutUs,
 };

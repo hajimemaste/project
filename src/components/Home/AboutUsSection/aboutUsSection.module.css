@@ -87,8 +87,6 @@
   align-items: center;
   gap: 8px;
 
-  opacity: 0;
-
   p {
     font-size: 16px;
     font-weight: 500;
@@ -109,8 +107,6 @@
   align-items: start;
   gap: 4px;
   flex: 1;
-
-  opacity: 0;
 }
 
 .header_item {
@@ -138,8 +134,12 @@
 
 .action {
   animation: slideInUp 1s ease;
-  transform: translateY(0);
-  opacity: 1;
+}
+
+.action_close {
+  animation: slideOutUp 1s ease;
+  transform: translateY(-100px);
+  opacity: 0;
 }
 
 @keyframes slideInUp {
@@ -150,6 +150,17 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(var(--value));
   }
 }
 

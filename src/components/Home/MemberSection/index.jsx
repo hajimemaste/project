@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./memberSection.module.css";
 
 import { image } from "../../../assets/images";
 import { Btn } from "../../atoms";
+import useScrollEffect from "./useScrollEffect";
 
 const MemberSection = (props) => {
   const members = [
@@ -14,32 +15,10 @@ const MemberSection = (props) => {
     { avatar: `${image.avatar_6}`, name: "Jane Cooper", position: "Staff" },
   ];
 
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThreshold = viewportHeight * 4 + 300;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, sectionRef } = useScrollEffect();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={sectionRef}>
       <div
         className={`${styles.card} ${scrolled ? styles.action : styles.close}`}
         style={{ "--translate-value": "100px" }}

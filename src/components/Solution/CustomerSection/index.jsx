@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./customerSection.module.css";
 import { image } from "../../../assets/images";
 import Card from "./Card";
+import useScrollEffect from "./useScrollEffect";
 
 const CustomerSection = (props) => {
   const customers = [
@@ -32,47 +33,14 @@ const CustomerSection = (props) => {
     },
   ];
 
-  const [scrolled, setScrolled] = useState(false);
-  const [scrolledItem, setScrolledItem] = useState(null);
-  const [scrolledClose, setScrolledClose] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThreshold = viewportHeight * 2 + 500;
-
-      const scrollThresholdClose = viewportHeight * 4 - 600;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-        setScrolledItem(true);
-      } else {
-        setScrolled(false);
-      }
-
-      if (scrollPosition >= scrollThresholdClose) {
-        setScrolledClose(true);
-        setScrolledItem(false);
-      } else {
-        setScrolledClose(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, scrolledClose, sectionRef } = useScrollEffect();
 
   return (
     <div
       className={`${styles.container} ${
         scrolledClose ? styles.action_close_opacity : styles.action_open_opacity
       }`}
+      ref={sectionRef}
     >
       <div
         className={`${styles.header} ${

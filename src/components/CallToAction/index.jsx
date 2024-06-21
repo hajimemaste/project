@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { image } from "../../assets/images";
 import { InputText, Btn } from "../atoms";
 import styles from "./callToAction.module.css";
+import useScrollEffect from "./useScrollEffect";
 
 const CallToAction = (props) => {
   const [inputValue, setInputValue] = useState("");
@@ -10,36 +11,14 @@ const CallToAction = (props) => {
     setInputValue(event.target.value);
   };
 
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-      const scrollPosition = window.scrollY;
-      const totalHeight = document.documentElement.scrollHeight;
-      const scrollFromBottom = totalHeight - scrollPosition - viewportHeight;
-
-      const scrollThreshold = viewportHeight - 500;
-
-      if (scrollFromBottom <= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, sectionRef } = useScrollEffect();
 
   return (
     <div
       className={`${styles.cta} ${
         scrolled ? styles.action_opacity : styles.action_opacity_close
       }`}
+      ref={sectionRef}
     >
       <div
         className={`${styles.box} ${

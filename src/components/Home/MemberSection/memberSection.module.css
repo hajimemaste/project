@@ -1,11 +1,14 @@
 .container {
   width: 100%;
-  height: auto;
-  padding: 100px 48px 100px 48px;
-  justify-content: center;
+
+
+  padding: 48px;
+  margin-top: 60px;
+
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 46px;
+  overflow: hidden;
 }
 
 .card {
