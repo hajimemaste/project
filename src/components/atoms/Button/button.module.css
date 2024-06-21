@@ -27,3 +27,9 @@
 .btn:hover {
   z-index: 0;
 }
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: 0.9rem;
+  }
+}
