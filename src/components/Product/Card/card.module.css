@@ -82,7 +82,7 @@
 }
 
 .action {
-  animation: action 1.5s ease-in 0.5s;
+  animation: action 1.5s ease-in;
 }
 
 .action_Old {

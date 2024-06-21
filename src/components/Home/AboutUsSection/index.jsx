@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Btn } from "../../atoms";
 import { icon } from "../../../assets/svgs";
 import styles from "./aboutUsSection.module.css";
 
 const AboutUsSection = (props) => {
   const { scrollToSection } = props;
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      const viewportHeight = window.innerHeight;
+
+      const scrollThreshold = 300;
+
+      const scrollPosition = window.scrollY;
+
+      if (scrollPosition >= scrollThreshold) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
       <div className={styles.screen}></div>
-      <div className={styles.box}>
+      <div className={`${styles.box} ${scrolled && styles.close}`}>
         <h1 className={styles.header}>
           Lorem ipsum dolor <br />
           sit amet <br />
@@ -37,27 +60,37 @@ const AboutUsSection = (props) => {
         <div className={styles.line}></div>
         <div className={styles.list_item}>
           <button
-            className={styles.scoll}
+            className={`${styles.scoll} ${styles.action}`}
+            style={{ "--value": "100px" }}
             onClick={() => scrollToSection("difference")}
           >
             <p>Scroll</p>
             <icon.ArrowDownIcon />
           </button>
-          <div className={`${styles.item} ${styles.item_1}`}>
+          <div
+            className={`${styles.item} ${styles.action}`}
+            style={{ "--value": "150px" }}
+          >
             <div className={styles.header_item}>Architecture</div>
             <h4 className={styles.content_item}>
               Lorem ipsum dolor sit amet <br />
               consectetur. Dolor egestas sagittis sit.
             </h4>
           </div>
-          <div className={`${styles.item} ${styles.item_2}`}>
+          <div
+            className={`${styles.item} ${styles.action}`}
+            style={{ "--value": "200px" }}
+          >
             <h4 className={styles.header_item}>Interior</h4>
             <p className={styles.content_item}>
               Lorem ipsum dolor sit amet <br />
               consectetur.
             </p>
           </div>
-          <div className={`${styles.item} ${styles.item_3}`}>
+          <div
+            className={`${styles.item} ${styles.action}`}
+            style={{ "--value": "250px" }}
+          >
             <h4 className={styles.header_item}>Interact</h4>
             <p className={styles.content_item}>
               Lorem ipsum dolor sit amet <br />

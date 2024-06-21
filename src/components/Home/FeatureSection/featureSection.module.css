@@ -46,6 +46,8 @@
   max-width: 1000px;
   padding-top: 16px;
   margin-left: 342px;
+  height: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -90,6 +92,71 @@
 
   img {
     height: 446px;
+  }
+}
+
+.open {
+  animation: open 0.5s ease-in;
+  opacity: 1;
+  height: 100%;
+}
+
+.close {
+  animation: close 0.5s ease-in;
+  opacity: 0;
+  height: 0;
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 540px;
+  }
+}
+
+@keyframes close {
+  0% {
+    opacity: 1;
+    height: 540px;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+/* Animation Opacity */
+
+.action_opacity {
+  animation: slideOpacity 1s ease;
+}
+
+.action_opacity_close {
+  animation: slideOpacityClose 1s ease;
+  opacity: 0.5;
+}
+
+@keyframes slideOpacity {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOpacityClose {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
   }
 }
 

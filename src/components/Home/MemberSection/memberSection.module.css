@@ -18,6 +18,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
+
+  transform: translateY(var(--translate-value));
 }
 
 .header {
@@ -44,6 +46,7 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
+  transform: translateY(var(--translate-value));
 }
 
 .box {
@@ -92,6 +95,33 @@
   line-height: 24px;
   letter-spacing: -0.02em;
   text-align: left;
+}
+
+.action {
+  animation: action 1s ease;
+  transform: translateY(0);
+}
+
+.close {
+  animation: close 1s ease;
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(var(--translate-value));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(var(--translate-value));
+  }
 }
 
 @media (max-width: 1440px) {
