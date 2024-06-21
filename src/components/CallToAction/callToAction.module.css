@@ -9,7 +9,7 @@
   background-position-y: top center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -68,6 +68,50 @@
   }
 }
 
+@media (max-width: 768px) {
+  .cta {
+    padding: 164px 0;
+  }
+
+  .box {
+    gap: 16px;
+  }
+
+  .header {
+    font-size: 36px;
+  }
+
+  .sub {
+    font-size: 14px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta {
+    padding: 100px 0;
+  }
+
+  .box {
+    gap: 16px;
+  }
+
+  .header {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .sub {
+    font-size: 12px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+}
 /* Animation Opacity */
 
 .action_opacity {

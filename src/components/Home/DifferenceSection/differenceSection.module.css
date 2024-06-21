@@ -1,6 +1,7 @@
 @import "../../../styles/variables.css";
 
 .container {
+
   width: 100%;
   padding: 48px;
   margin-top: 60px;
@@ -196,5 +197,120 @@
   to {
     opacity: 0;
     transform: translateY(var(--value));
+  }
+}
+
+/* Responsive Styles */
+
+@media (max-width: 1400px) {
+  .container {
+    height: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 100px 48px 114px;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    height: auto;
+    padding: 100px 48px 114px;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .img {
+    height: 300px;
+  }
+
+  .box_left {
+    gap: 30px;
+    align-items: start;
+  }
+
+  .header {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: left;
+  }
+
+  .img {
+    max-height: 633.41px;
+  }
+
+  .box_right {
+    gap: 60px;
+    align-items: center;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .sub {
+    flex-direction: row;
+    gap: 30px;
+    text-align: left;
+
+    p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  .list_box {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .box {
+    gap: 30px;
+    align-items: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    gap: 32px;
+    padding: 100px 48px 56px;
+  }
+
+  .box_right {
+    gap: 16px;
+  }
+
+  .header {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .list_box {
+    gap: 24px;
+  }
+
+  .img {
+    height: 200px;
+  }
+
+  .sub {
+    flex-direction: column;
+    gap: 8px;
+
+    p {
+      text-align: justify;
+    }
   }
 }

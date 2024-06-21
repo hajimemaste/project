@@ -2,22 +2,20 @@
 
 .container_top {
   width: 100%;
-  padding-bottom: 24px;
+  padding: 24px 16px;
   border-bottom: 1px solid var(--color-white);
 
   display: flex;
-  align-items: start;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .header {
-  width: 536px;
-
-  font-size: 36px;
+  font-size: 20px;
   font-weight: 500;
-  line-height: 56px;
-  letter-spacing: -0.01em;
-  text-align: left;
+  line-height: 24px;
+  text-align: center;
 
   span {
     color: var(--color-beige);
@@ -25,39 +23,34 @@
 }
 
 .content {
+  width: 100%;
   display: flex;
-  gap: 100px;
-  align-items: start;
-  justify-content: space-between;
+  flex-direction: row;
+  gap: 16px;
+  text-align: center;
+  justify-content: center;
 }
 
 .box {
   display: flex;
-  gap: 47px;
-  justify-content: space-between;
   align-items: start;
+  gap: 32px;
+  transform: translateX(20px);
 }
 
 .browse {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.2px;
+  font-size: 12px;
+  line-height: 14px;
   text-align: left;
-
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: start;
+  gap: 10px;
 }
 
 .list_browse {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  align-items: start;
-  justify-content: space-between;
-  color: var(--color-beige);
+  gap: 8px;
 
   a {
     text-decoration: underline;
@@ -69,28 +62,66 @@
 }
 
 .contact {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 19.2px;
+  font-size: 12px;
+  line-height: 14px;
   text-align: left;
-
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: start;
-  justify-content: space-between;
+  gap: 10px;
 }
 
 .content_contact {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  align-items: start;
-  justify-content: space-between;
+  gap: 8px;
 }
 
 .btn_scoll {
-  padding: 12px 14px;
+  position: absolute;
+  right: 48px;
+  padding: 8px;
   border: 1px solid var(--color-white);
   border-radius: 50%;
+  transform: translateY(-28px);
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .container_top {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 48px;
+  }
+
+  .header {
+    width: auto;
+    font-size: 36px;
+    line-height: 56px;
+    text-align: left;
+  }
+
+  .content {
+    width: auto;
+    flex-direction: row;
+    gap: 60px;
+    text-align: left;
+    align-items: baseline;
+  }
+
+  .box {
+    flex-direction: row;
+    gap: 47px;
+    align-items: start;
+  }
+
+  .browse,
+  .contact {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .list_browse,
+  .content_contact {
+    gap: 12px;
+  }
 }

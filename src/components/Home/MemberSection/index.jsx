@@ -58,6 +58,7 @@ const MemberSection = (props) => {
         </div>
         <Btn
           title="Join now"
+          className={styles.card_btn}
           color="rgba(255, 255, 255, 1)"
           backgroundcolor="linear-gradient(89.68deg, #F1B078 -20.43%, #E3934D 6.5%, #DF8F49 32.15%, #B56824 69.73%, #685117 128.94%)"
           border="linear-gradient(89.68deg, #F1B078 -20.43%, #E3934D 6.5%, #DF8F49 32.15%, #B56824 69.73%, #685117 128.94%)"
