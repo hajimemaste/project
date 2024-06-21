@@ -1,36 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Btn } from "../../atoms";
 import { icon } from "../../../assets/svgs";
 import styles from "./aboutUsSection.module.css";
+import useScrollEffect from "./useScrollEffect";
 
 const AboutUsSection = (props) => {
+  const { scrolled, sectionRef } = useScrollEffect();
   const { scrollToSection } = props;
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThreshold = 300;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={sectionRef}>
       <div className={styles.screen}></div>
       <div className={`${styles.box} ${scrolled && styles.close}`}>
         <h1 className={styles.header}>
@@ -60,7 +39,9 @@ const AboutUsSection = (props) => {
         <div className={styles.line}></div>
         <div className={styles.list_item}>
           <button
-            className={`${styles.scoll} ${styles.action}`}
+            className={`${styles.scoll} ${
+              scrolled ? styles.action_close : styles.action
+            }`}
             style={{ "--value": "100px" }}
             onClick={() => scrollToSection("difference")}
           >
@@ -68,7 +49,9 @@ const AboutUsSection = (props) => {
             <icon.ArrowDownIcon />
           </button>
           <div
-            className={`${styles.item} ${styles.action}`}
+            className={`${styles.item} ${
+              scrolled ? styles.action_close : styles.action
+            }`}
             style={{ "--value": "150px" }}
           >
             <div className={styles.header_item}>Architecture</div>
@@ -78,7 +61,9 @@ const AboutUsSection = (props) => {
             </h4>
           </div>
           <div
-            className={`${styles.item} ${styles.action}`}
+            className={`${styles.item} ${
+              scrolled ? styles.action_close : styles.action
+            }`}
             style={{ "--value": "200px" }}
           >
             <h4 className={styles.header_item}>Interior</h4>
@@ -88,7 +73,9 @@ const AboutUsSection = (props) => {
             </p>
           </div>
           <div
-            className={`${styles.item} ${styles.action}`}
+            className={`${styles.item} ${
+              scrolled ? styles.action_close : styles.action
+            }`}
             style={{ "--value": "250px" }}
           >
             <h4 className={styles.header_item}>Interact</h4>

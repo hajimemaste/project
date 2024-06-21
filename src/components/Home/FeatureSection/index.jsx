@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
 import styles from "./featureSection.module.css";
+import useScrollEffect from "./useScrollEffect";
 
 const FeatureSection = (props) => {
   const listFeature = [
@@ -42,42 +43,23 @@ const FeatureSection = (props) => {
     },
   ];
 
+  const { scrolled, sectionRef } = useScrollEffect();
   const [activeIndex, setActiveIndex] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
 
   const handleClick = (index) => {
     if (activeIndex != index) {
       setActiveIndex(index);
+    } else {
+      setActiveIndex(null);
     }
   };
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThreshold = viewportHeight * 3 - 400;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div
       className={`${styles.container} ${
         scrolled ? styles.action_opacity_close : styles.action_opacity
       }`}
+      ref={sectionRef}
     >
       {listFeature.map((feature, index) => (
         <div

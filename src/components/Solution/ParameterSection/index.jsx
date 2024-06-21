@@ -1,45 +1,16 @@
 import React, { useState, useEffect } from "react";
 import styles from "./parameterSection.module.css";
+import useScrollEffect from "./useScrollEffect";
 
 const ParameterSection = (props) => {
-  const [scrolled, setScrolled] = useState(false);
-  const [scrolledClose, setScrolledClose] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThreshold = viewportHeight * 1 + 500;
-
-      const scrollThresholdClose = viewportHeight * 3 - 600;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
-      if (scrollPosition >= scrollThresholdClose) {
-        setScrolledClose(true);
-      } else {
-        setScrolledClose(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, scrolledClose, sectionRef } = useScrollEffect();
 
   return (
     <div
       className={`${styles.container} ${
         scrolledClose ? styles.action_close : styles.action_open
       }`}
+      ref={sectionRef}
     >
       <div className={styles.container_line}>
         <div className={styles.header}>

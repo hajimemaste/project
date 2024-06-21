@@ -3,42 +3,13 @@ import { Btn, BoxDiff } from "../../atoms";
 import { icon } from "../../../assets/svgs";
 import styles from "./differenceSection.module.css";
 
+import useScrollEffect from "./useScrollEffect";
+
 const DifferenceSection = (props) => {
-  const [scrolledHeader, setScrolledHeader] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThresholdHeader = 500;
-
-      const scrollThreshold = 800;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
-      if (scrollPosition >= scrollThresholdHeader) {
-        setScrolledHeader(true);
-      } else {
-        setScrolledHeader(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, scrolledHeader, sectionRef } = useScrollEffect();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} ref={sectionRef}>
       <div className={styles.box_left}>
         <h2
           className={`${styles.header} ${

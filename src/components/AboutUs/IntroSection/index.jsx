@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./introSection.module.css";
+import { image } from "../../../assets/images";
 
 const IntroSection = (props) => {
   return (
@@ -7,6 +8,9 @@ const IntroSection = (props) => {
       <div className={styles.header}>
         <h1>About us</h1>
         <h3>our missing</h3>
+      </div>
+      <div className={styles.img}>
+        <img src={`${image.bgAboutUs}`} alt="" />
       </div>
       <div className={styles.content}>
         <h2>

@@ -1,44 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./interactiveSection.module.css";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
+import useScrollEffect from "./useScrollEffect";
 
 const InteractiveSection = (props) => {
-  const [scrolledHeader, setScrolledHeader] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    function handleScroll() {
-      const viewportHeight = window.innerHeight;
-
-      const scrollThresholdHeader = viewportHeight * 2 + 300;
-
-      const scrollThreshold = viewportHeight * 2 + 500;
-
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= scrollThreshold) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
-      if (scrollPosition >= scrollThresholdHeader) {
-        setScrolledHeader(true);
-      } else {
-        setScrolledHeader(false);
-      }
-    }
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const { scrolled, scrolledHeader, sectionRef } = useScrollEffect();
 
   return (
-    <section className={styles.container}>
+    <div className={styles.container} ref={sectionRef}>
       <h1
         className={`${styles.header} ${
           scrolledHeader ? styles.action_opacity : styles.action_opacity_close
@@ -103,7 +73,7 @@ const InteractiveSection = (props) => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
