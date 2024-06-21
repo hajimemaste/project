@@ -253,6 +253,8 @@
   }
 }
 
+/* Responsive */
+
 @media (max-width: 1236px) {
   .content_img {
     transform: scale(0.8);

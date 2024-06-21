@@ -1,7 +1,6 @@
 @import "../../../styles/variables.css";
 
 .container {
-
   width: 100%;
   padding: 48px;
   margin-top: 60px;
@@ -201,12 +200,6 @@
 }
 
 /* Responsive Styles */
-
-@media (max-width: 1400px) {
-  .container {
-    height: auto;
-  }
-}
 
 @media (max-width: 1200px) {
   .container {

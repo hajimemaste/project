@@ -150,28 +150,7 @@
   }
 }
 
-@media (max-width: 1400px) {
-  .container {
-    height: auto;
-  }
-
-  .content {
-    gap: 60px;
-  }
-
-  .content_left {
-    min-width: 45%;
-  }
-
-  .content_right {
-    min-width: 45%;
-  }
-
-  .icon_Arc {
-    right: 100px;
-    left: inherit;
-  }
-}
+/* Responsive */
 
 @media (max-width: 1200px) {
   .content_left {

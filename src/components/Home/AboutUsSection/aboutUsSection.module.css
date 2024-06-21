@@ -177,6 +177,8 @@
   }
 }
 
+/* Responsive */
+
 @media (max-width: 1024px) {
   .header {
     font-size: 36px;

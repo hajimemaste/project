@@ -1,7 +1,6 @@
 .container {
   width: 100%;
 
-
   padding: 48px;
   margin-top: 60px;
 
@@ -127,22 +126,7 @@
   }
 }
 
-@media (max-width: 1480px) {
-  .container {
-    height: auto;
-  }
-
-  .card {
-    width: 240px;
-    height: 320px;
-  }
-
-  .card_member {
-    width: 240px;
-    height: 320px;
-    background-size: cover;
-  }
-}
+/* Responsive */
 
 @media (max-width: 1060px) {
   .container {
