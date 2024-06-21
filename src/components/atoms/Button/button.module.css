@@ -31,5 +31,13 @@
 @media (max-width: 768px) {
   .btn {
     font-size: 0.9rem;
+    padding: 14px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 0.8rem;
+    padding: 8px;
   }
 }

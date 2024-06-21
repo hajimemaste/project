@@ -2,11 +2,10 @@
 
 .container_bottom {
   padding-top: 24px;
-  padding-bottom: 24px;
-
+  font-size: 12px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -28,9 +27,9 @@
   align-items: center;
 
   p {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 16.8px;
+    line-height: 14px;
     margin: 0;
   }
 }

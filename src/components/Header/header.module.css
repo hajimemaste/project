@@ -81,6 +81,22 @@
     justify-content: space-between;
   }
 
+  .feature {
+    display: none;
+  }
+
+  .sidebar_feature {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 24px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .icon_search {
+    border: none;
+  }
+
   .list_navigator {
     display: none;
     flex-direction: column;

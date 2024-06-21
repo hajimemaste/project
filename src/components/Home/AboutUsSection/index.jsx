@@ -49,6 +49,7 @@ const AboutUsSection = (props) => {
         <Btn
           title="More about us"
           isIcon={true}
+          className={styles.about_btn}
           icon={<icon.ArrowUpRightIcon />}
           backgroundcolor={"rgba(17, 17, 17, 1)"}
           color={"rgba(255, 255, 255, 1)"}

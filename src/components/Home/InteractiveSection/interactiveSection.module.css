@@ -186,6 +186,19 @@
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
+    gap: 88px;
+  }
+
+  .header {
+    font-size: 36px;
+  }
+
+  .content_header {
+    text-align: center;
+  }
+
+  .content_sub {
+    text-align: center;
   }
 }
 
@@ -196,19 +209,12 @@
   }
 
   .header {
-    font-size: 44px;
+    font-size: 48px;
+    line-height: 44px;
   }
 
   .content_left {
     transform: scale(0.72);
-  }
-
-  .content_header {
-    text-align: center;
-  }
-
-  .content_sub {
-    text-align: center;
   }
 
   .img {
@@ -222,25 +228,30 @@
   }
 
   .header {
-    font-size: 32px;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
     text-align: center;
   }
 
   .content {
-    gap: 0;
+    gap: 24px;
   }
 
   .content_header {
-    font-size: 32px;
+    font-size: 24px;
+    line-height: 28px;
   }
 
   .content_sub {
+    margin-top: 8px;
     font-size: 12px;
+    line-height: 14px;
   }
 
   .content_left {
     transform: scale(0.45);
-    height: 500px;
+    height: 400px;
   }
 
   .content_right {
