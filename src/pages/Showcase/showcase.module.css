@@ -3,6 +3,9 @@
   height: 100vh;
   padding: 0 48px;
 
+  display: flex;
+  flex-direction: column;
+
   background-image: url(../../assets/images/light.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -31,10 +34,10 @@
   display: flex;
   gap: 66px;
   align-items: center;
+  position: relative;
 }
 
 .navigation {
-  padding-top: 68px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,18 +57,59 @@
 
 .carousel_container {
   height: 100%;
+  width: 90%;
 
   overflow: visible;
 }
 
 .carousel_card {
   width: 100%;
-  height: 480px;
+  height: 100vh;
   position: static;
-
-  margin-bottom: 140px;
 
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .header {
+    top: 12%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    font-size: 70px;
+  }
+
+  .content {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .header {
+    font-size: 50px;
+  }
+
+  .content {
+    gap: 20px;
+    align-items: start;
+  }
+
+  .navigation {
+    transform: translateY(200px);
+  }
+
+  .carousel_card {
+    margin-bottom: 270px;
+  }
 }

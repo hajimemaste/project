@@ -3,7 +3,6 @@ import styles from "./contentCard.module.css";
 import { icon } from "../../../assets/svgs";
 
 const ContentCard = ({ id, content, feat_1, feat_2, isSelect }) => {
-  console.log("id: ", id, "isSelect: ", isSelect);
   return (
     <div className={styles.container}>
       <div className={`${styles.box} ${isSelect && styles.action}`}>

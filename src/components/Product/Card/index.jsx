@@ -9,7 +9,7 @@ const Card = ({ isSelect, isOld, header_1, header_2, id }) => {
           isOld ? styles.action_Old : null
         }`}
       >
-        {header_1}
+        {header_1} <span className={styles.header_responsive}>{header_2}</span>
         <h1
           className={`${
             id === 3
@@ -22,7 +22,6 @@ const Card = ({ isSelect, isOld, header_1, header_2, id }) => {
           {header_2}
         </h1>
       </div>
-
       <div
         className={`${styles.img} ${
           id == 2
