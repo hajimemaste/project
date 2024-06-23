@@ -58,7 +58,8 @@
 
 .img {
   position: absolute;
-  bottom: -20%;
+  bottom: 0;
+  transform: translateY(100px);
   left: 0;
   right: 0;
 
@@ -130,9 +131,17 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .cta {
+    background-position: center;
+    background-position-y: -20px;
+    background-size: cover;
+  }
+}
+
 @media (max-width: 768px) {
   .cta {
-    padding: 164px 0;
+    transform: translateY(0);
   }
 
   .box {
@@ -149,6 +158,10 @@
 
   .form {
     flex-direction: column;
+  }
+
+  .img {
+    transform: translateY(60px);
   }
 }
 
@@ -174,5 +187,9 @@
 
   .form {
     flex-direction: column;
+  }
+
+  .img {
+    transform: translateY(30px);
   }
 }

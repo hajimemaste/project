@@ -22,7 +22,7 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
 
   p {
     font-size: 14px;
@@ -37,4 +37,33 @@
   gap: 145px;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .container_bottom {
+    align-items: center;
+    gap: 10px;
+  }
+
+  .content {
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .text {
+    width: 100%;
+    gap: 0;
+  }
+}
+
+@media (max-width: 615px) {
+  .content {
+    font-size: 14px;
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+  }
 }

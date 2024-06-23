@@ -44,7 +44,6 @@ function useScrollEffect() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log(scrolled, 2);
 
   return { scrolled, scrolledHeader, sectionRef };
 }

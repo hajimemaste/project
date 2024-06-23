@@ -9,7 +9,10 @@ const FormSection = (props) => {
   const [telephone, setTelephone] = useState("");
   const [description, setDescription] = useState("");
 
-  const handleChange = () => {};
+  const handleNameChange = (event) => setName(event.target.value);
+  const handleEmailChange = (event) => setEmail(event.target.value);
+  const handleTelephoneChange = (event) => setTelephone(event.target.value);
+  const handleDescriptionChange = (event) => setDescription(event.target.value);
 
   return (
     <div className={styles.container}>
@@ -28,12 +31,14 @@ const FormSection = (props) => {
               placeholder="Name"
               value={name}
               className={styles.inputName}
+              onChange={handleNameChange}
             />
             <input
               type="number"
               placeholder="Telephone"
               value={telephone}
               className={styles.inputTelephone}
+              onChange={handleTelephoneChange}
             />
           </div>
           <input
@@ -41,6 +46,7 @@ const FormSection = (props) => {
             placeholder="Email"
             value={email}
             className={styles.inputEmail}
+            onChange={handleEmailChange}
           />
           <textarea
             type="text"
@@ -48,6 +54,7 @@ const FormSection = (props) => {
             value={description}
             className={styles.inputDescription}
             rows={4}
+            onChange={handleDescriptionChange}
           />
           <div className={styles.btn}>
             <Btn

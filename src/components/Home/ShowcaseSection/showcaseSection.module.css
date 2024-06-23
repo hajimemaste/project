@@ -1,7 +1,6 @@
 .container {
   width: 100%;
-  padding: 48px;
-  margin-top: 60px;
+  padding: 100px 48px;
 
   display: flex;
   flex-direction: column;
@@ -263,6 +262,25 @@
   .card {
     gap: 24px;
   }
+
+  .action_zoom_close {
+    animation: slideZoomClose 1s ease;
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  @keyframes slideZoom {
+    from {
+      opacity: 0;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(0.8);
+    }
+  }
 }
 
 @media (max-width: 1060px) {
@@ -293,7 +311,36 @@
   }
 }
 
+@media (max-width: 900px) {
+  .header {
+    font-size: 48px;
+  }
+
+  .slider {
+    width: 100%;
+    gap: 20px;
+  }
+
+  .card_header {
+    h2 {
+      font-size: 34px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .card_content {
+    font-size: 14px;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 100px 24px 56px;
+  }
+
   .header {
     font-size: 44px;
   }
@@ -306,12 +353,35 @@
     transform: scale(0.6);
   }
 
+  .action_zoom_close {
+    animation: slideZoomClose 1s ease;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  @keyframes slideZoom {
+    from {
+      opacity: 0;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(0.6);
+    }
+  }
+
   .card {
     gap: 24px;
   }
 }
 
 @media (max-width: 480px) {
+  .container {
+    padding: 60px 24px 56px;
+  }
+
   .header {
     font-size: 36px;
     line-height: 0;
@@ -330,22 +400,40 @@
 
   .card_header {
     h2 {
-      font-size: 24px;
-      line-height: 26px;
+      font-size: 32px;
     }
 
     p {
-      font-size: 14px;
+      font-size: 12px;
     }
   }
 
   .card_content {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .content_img {
     transform: scale(0.36);
     height: 224px;
+  }
+
+  .action_zoom_close {
+    animation: slideZoomClose 1s ease;
+    opacity: 0;
+    transform: scale(0.36);
+  }
+
+  @keyframes slideZoom {
+    from {
+      opacity: 0;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(0.36);
+    }
   }
 
   .card {

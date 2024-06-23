@@ -1,12 +1,11 @@
 .container {
   width: 100%;
-
-  padding: 48px;
-  margin-top: 60px;
+  padding: 100px 48px;
 
   display: flex;
   flex-wrap: wrap;
   gap: 46px;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -128,9 +127,9 @@
 
 /* Responsive */
 
-@media (max-width: 1060px) {
+@media (max-width: 1200px) {
   .container {
-    gap: 60px;
+    gap: 40px;
   }
 
   .card {
@@ -141,12 +140,41 @@
   .card_member {
     width: 240px;
     height: 320px;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    font-size: 48px;
+  }
+
+  .sub {
+    font-size: 14px;
+  }
+
+  .name {
+    font-size: 18px;
+  }
+  .position {
+    font-size: 14px;
+  }
+
+  .content_header {
+    font-size: 34px;
+  }
+
+  .content_sub {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    gap: 40px;
+    gap: 20px;
+
+    padding: 100px 24px 56px;
   }
 
   .card {
@@ -200,10 +228,11 @@
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
   .container {
     gap: 12px;
     justify-content: space-evenly;
+    padding: 70px 24px 56px;
   }
 
   .header {

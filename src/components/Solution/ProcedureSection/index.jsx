@@ -151,6 +151,107 @@ const ProcedureSection = (props) => {
           </div>
         </div>
       </div>
+
+      <div className={styles.content_responsive}>
+        <div
+          className={`${styles.line} ${
+            scrolled ? styles.action_width : styles.action_width_close
+          }`}
+        ></div>
+
+        <div className={styles.box}>
+          <div className={styles.box_content}>
+            <div
+              className={`${styles.container_content} ${
+                scrolled ? styles.action_up : styles.action_up_close
+              }`}
+            >
+              <div className={styles.content_header}>
+                <p className={styles.content_id}>01</p>
+                <p>Lorem ipsum dolor sit consectetur.</p>
+              </div>
+              <p className={styles.content_sub}>
+                Lorem ipsum dolor sit amet consectetur. Ultricies convallis
+                pretium egestas aenean pellentesque rhoncus elit. Non nisi
+                tincidunt sit odio in massa.
+              </p>
+            </div>
+            <div className={`${styles.dot} ${styles.dot_1} `}></div>
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <div className={styles.box_content}>
+            <div
+              className={`${styles.container_content} ${
+                scrolled ? styles.action_down : styles.action_down_close
+              }`}
+            >
+              <div className={styles.content_header}>
+                <p className={styles.content_id}>02</p>
+                <p>Lorem ipsum dolor sit consectetur.</p>
+              </div>
+              <p className={styles.content_sub}>
+                Lorem ipsum dolor sit amet consectetur. Ultricies convallis
+                pretium egestas aenean pellentesque rhoncus elit. Non nisi
+                tincidunt sit odio in massa.
+              </p>
+            </div>
+
+            <div className={`${styles.dot} ${styles.dot_1} `}></div>
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <div className={styles.box_content}>
+            <div
+              className={`${styles.container_content} ${
+                scrolled ? styles.action_up : styles.action_up_close
+              }`}
+            >
+              <div className={styles.content_header}>
+                <p className={styles.content_id}>03</p>
+                <p>Lorem ipsum dolor sit consectetur.</p>
+              </div>
+              <p className={styles.content_sub}>
+                Lorem ipsum dolor sit amet consectetur. Ultricies convallis
+                pretium egestas aenean pellentesque rhoncus elit. Non nisi
+                tincidunt sit odio in massa.
+              </p>
+            </div>
+            <div
+              className={`${styles.dot} ${styles.dot_1} ${
+                scrolled ? styles.action_opacity : styles.action_opacity_close
+              }`}
+            ></div>
+          </div>
+        </div>
+
+        <div className={styles.box}>
+          <div className={styles.box_content}>
+            <div
+              className={`${styles.container_content} ${
+                scrolled ? styles.action_down : styles.action_down_close
+              }`}
+            >
+              <div className={styles.content_header}>
+                <p className={styles.content_id}>04</p>
+                <p>Lorem ipsum dolor sit consectetur.</p>
+              </div>
+              <p className={styles.content_sub}>
+                Lorem ipsum dolor sit amet consectetur. Ultricies convallis
+                pretium egestas aenean pellentesque rhoncus elit. Non nisi
+                tincidunt sit odio in massa.
+              </p>
+            </div>
+            <div
+              className={`${styles.dot} ${styles.dot_1} ${
+                scrolled ? styles.action_opacity : styles.action_opacity_close
+              }`}
+            ></div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

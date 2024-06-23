@@ -20,22 +20,22 @@ const Home = (props) => {
 
   return (
     <div id={styles.home}>
-      <section id="aboutUs">
+      <section id="aboutUs" className={styles.scroll}>
         <AboutUsSection scrollToSection={scrollToSection} />
       </section>
-      <section id="difference">
+      <section id="difference" className={styles.scroll}>
         <DifferenceSection />
       </section>
-      <section id="feature">
+      <section id="feature" className={styles.scroll}>
         <FeatureSection />
       </section>
-      <section id="interactive">
+      <section id="interactive" className={styles.scroll}>
         <InteractiveSection />
       </section>
-      <section id="showcase">
+      <section id="showcase" className={styles.scroll}>
         <ShowcaseSection />
       </section>
-      <section id="member">
+      <section id="member" className={styles.scroll}>
         <MemberSection />
       </section>
     </div>

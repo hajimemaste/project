@@ -12,7 +12,7 @@ function useScrollEffect() {
           sectionRef.current.getBoundingClientRect().top + window.scrollY;
         const sectionHeight = sectionRef.current.clientHeight;
         const scrollThreshold = sectionTop - sectionHeight * 0.7;
-        const scrollThresholdClose = sectionTop + sectionHeight * 0.6;
+        const scrollThresholdClose = sectionTop + sectionHeight * 0.8;
 
         const scrollPosition = window.scrollY;
 

@@ -5,3 +5,9 @@
   padding: 24px 48px;
   background: var(--color-black);
 }
+
+@media (max-width: 615px) {
+  #footer {
+    padding: 12px 24px;
+  }
+}

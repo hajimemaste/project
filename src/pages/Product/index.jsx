@@ -91,7 +91,7 @@ const Product = (props) => {
   };
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.navigation}>
         {listCard.map((card, index) => (
           <button
@@ -154,7 +154,7 @@ const Product = (props) => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

@@ -12,6 +12,16 @@ const ParameterSection = (props) => {
       }`}
       ref={sectionRef}
     >
+      <div className={styles.header_responsive}>
+        <div className={styles.header_left}>
+          <p className={styles.sub}>Lorem ipsum dolor sit amet consectetur.</p>
+          <h1>Parameters that record breakthroughs</h1>
+        </div>
+        <div className={styles.box_end_right}>
+          <h1 className={styles.box_end_header}>100+</h1>
+          <p className={styles.box_end_sub}>Customers worldwide</p>
+        </div>
+      </div>
       <div className={styles.container_line}>
         <div className={styles.header}>
           <p className={styles.sub}>Lorem ipsum dolor sit amet consectetur.</p>

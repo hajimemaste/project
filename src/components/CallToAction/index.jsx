@@ -14,7 +14,7 @@ const CallToAction = (props) => {
   const { scrolled, sectionRef } = useScrollEffect();
 
   return (
-    <div
+    <section
       className={`${styles.cta} ${
         scrolled ? styles.action_opacity : styles.action_opacity_close
       }`}
@@ -50,7 +50,7 @@ const CallToAction = (props) => {
       <div className={styles.img}>
         <img src={image.backGrBottomCta} alt="bottomCta" />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,6 +5,7 @@
   background-image: url(../../assets/images/bgProduct.png);
   background-repeat: no-repeat;
   background-position: center;
+  overflow: hidden;
 
   position: relative;
 }

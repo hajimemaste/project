@@ -59,7 +59,7 @@ const Showcase = (props) => {
   };
 
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <h1 className={styles.header}>show case</h1>
       <div className={styles.content}>
         <div className={styles.navigation}>
@@ -90,7 +90,7 @@ const Showcase = (props) => {
           </Slider>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,11 +1,11 @@
 .container {
   width: 100%;
-  padding: 166px 48px 132px;
+  padding: 100px 48px 56px;
   background-image: url(../../../assets/images/bottomCta.png);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: 620px;
+  background-position-y: 490px;
 
   display: flex;
   justify-content: space-between;
@@ -88,10 +88,6 @@
   flex: 2;
 }
 
-.inputEmail {
-  flex: 1;
-}
-
 .inputDescription {
   flex: 1;
 
@@ -169,5 +165,140 @@
     font-weight: 500;
     line-height: 19.2px;
     text-align: left;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    background-position-y: 590px;
+  }
+
+  .information {
+    width: 40%;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    gap: 48px;
+  }
+
+  .header {
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .box {
+    input {
+      font-size: 14px;
+      padding: 14px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .inputDescription {
+    font-size: 14px;
+    padding: 14px;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  .information_header {
+    h4 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .information_line {
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    background-position-y: 920px;
+    padding: 100px 24px 56px;
+  }
+
+  .information {
+    width: 100%;
+  }
+
+  .information_content {
+    gap: 20px;
+  }
+
+  .information_line {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 70px 24px 56px;
+    background-position-y: 970px;
+  }
+
+  .header {
+    h1 {
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .box {
+    input {
+      font-size: 12px;
+      padding: 12px;
+
+      &::placeholder {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .inputDescription {
+    font-size: 12px;
+    padding: 12px;
+
+    &::placeholder {
+      font-size: 12px;
+    }
+  }
+
+  .information_header {
+    h4 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .information_line {
+    p {
+      font-size: 12px;
+    }
   }
 }

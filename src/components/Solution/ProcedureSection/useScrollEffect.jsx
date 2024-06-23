@@ -52,8 +52,6 @@ function useScrollEffect() {
     };
   }, []);
 
-  console.log(scrolled, 1);
-
   return { scrolled, scrolledHeader, scrolledClose, sectionRef };
 }
 

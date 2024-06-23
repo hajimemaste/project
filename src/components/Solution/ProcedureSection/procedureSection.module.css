@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 48px;
+  padding: 100px 48px;
   margin-top: 60px;
   overflow: hidden;
 
@@ -177,6 +177,14 @@
   animation: slideBoxDownClose 1s ease-in;
   opacity: 0;
   transform: translateY(-100px);
+}
+
+.content_responsive {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
 }
 
 @keyframes slideBoxDown {
@@ -387,5 +395,107 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .content {
+    display: none;
+  }
+
+  .content_responsive {
+    display: flex;
+    position: relative;
+  }
+
+  .box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    border-top: 1px dashed rgba(255, 255, 255, 1);
+  }
+
+  .line {
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.8) 36.5%,
+      rgba(17, 17, 17, 0.4) 100%
+    );
+  }
+
+  .header_text {
+    font-size: 48px;
+  }
+
+  .sub {
+    font-size: 22px;
+  }
+
+  .content_header {
+    font-size: 22px;
+  }
+
+  .content_sub {
+    font-size: 14px;
+  }
+
+  .action_width_close {
+    animation: slideWidthClose 1s ease-in;
+    height: 0%;
+  }
+
+  @keyframes slideWidth {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 100px 24px 56px;
+  }
+
+  .content_responsive {
+    gap: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 70px 24px 56px;
+  }
+
+  .header_text {
+    font-size: 40px;
+  }
+
+  .sub {
+    font-size: 20px;
+  }
+
+  .content_header {
+    font-size: 20px;
+  }
+
+  .content_sub {
+    font-size: 12px;
   }
 }
