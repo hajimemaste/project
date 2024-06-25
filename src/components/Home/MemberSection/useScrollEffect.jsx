@@ -1,12 +1,12 @@
 import { useState, useEffect, useRef } from "react";
+import debounce from "lodash/debounce";
 
 function useScrollEffect() {
   const [scrolled, setScrolled] = useState(false);
-
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    function handleScroll() {
+    const handleScroll = debounce(() => {
       if (sectionRef.current) {
         const sectionTop =
           sectionRef.current.getBoundingClientRect().top + window.scrollY;
@@ -14,22 +14,18 @@ function useScrollEffect() {
         const scrollThreshold = sectionTop - sectionHeight * 0.4;
         const scrollPosition = window.scrollY;
 
-        if (scrollPosition >= scrollThreshold) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
+        setScrolled(scrollPosition >= scrollThreshold);
       }
-    }
+    }, 200);
 
-    function handleResize() {
+    const handleResize = debounce(() => {
       handleScroll();
-    }
+    }, 200);
 
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
-    handleScroll();
+    handleScroll(); // Kiểm tra trạng thái ban đầu
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
