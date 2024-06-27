@@ -129,6 +129,16 @@
 }
 
 /* Responsive */
+@media (max-width: 1280px) {
+  .card {
+    transform: translateY(60px);
+  }
+
+  .img_1 {
+    top: 150px;
+    left: 400px;
+  }
+}
 
 @media (max-width: 1200px) {
   .card {
@@ -162,7 +172,31 @@
 
   .img_4 {
     top: 170px;
-    left: 80px;
+    left: 100px;
+  }
+}
+
+@media (max-width: 1114px) {
+  .header {
+    h1 {
+      font-size: 48px;
+    }
+  }
+
+  .img_1 {
+    height: 300px;
+  }
+
+  .img_2 {
+    height: 300px;
+  }
+
+  .img_3 {
+    height: 300px;
+  }
+
+  .img_4 {
+    height: 300px;
   }
 }
 
@@ -268,5 +302,148 @@
 
   .header_responsive {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    transform: translateY(60px);
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    h1 {
+      font-size: 20px;
+    }
+    span {
+      font-size: 20px;
+    }
+  }
+
+  .header_responsive {
+    font-size: 20px;
+  }
+
+  .img_1 {
+    top: 80px;
+    left: 70px;
+    width: 75%;
+    height: 45%;
+  }
+
+  .img_2 {
+    top: 80px;
+    left: 70px;
+    width: 75%;
+    height: 45%;
+  }
+
+  .img_3 {
+    top: 80px;
+    left: 70px;
+    width: 75%;
+    height: 45%;
+  }
+
+  .img_4 {
+    top: 80px;
+    left: 70px;
+    width: 75%;
+    height: 45%;
+  }
+}
+
+@media (max-height: 428px) {
+  .card {
+    transform: translateY(0);
+  }
+
+  .header {
+    padding-top: 10px;
+    padding-left: 44px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+
+  .header_responsive {
+    display: block;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .header_bottom {
+    display: none;
+  }
+
+  .header_bottom_3 {
+    display: none;
+  }
+
+  .header_bottom_4 {
+    display: none;
+  }
+
+  .img_1 {
+    top: 80px;
+    left: 90px;
+    width: 85%;
+    height: 55%;
+  }
+
+  .img_2 {
+    top: 80px;
+    left: 90px;
+    width: 85%;
+    height: 55%;
+  }
+
+  .img_3 {
+    top: 80px;
+    left: 90px;
+    width: 85%;
+    height: 55%;
+  }
+
+  .img_4 {
+    top: 80px;
+    left: 90px;
+    width: 85%;
+    height: 55%;
+  }
+}
+
+@media (max-height: 320px) {
+  .header {
+    h1 {
+      font-size: 26px;
+    }
+  }
+
+  .header_responsive {
+    font-size: 26px;
+  }
+
+  .img_1 {
+    left: 70px;
+    height: 50%;
+  }
+
+  .img_2 {
+    left: 70px;
+    height: 50%;
+  }
+
+  .img_3 {
+    left: 70px;
+    height: 50%;
+  }
+
+  .img_4 {
+    left: 70px;
+    height: 50%;
   }
 }
