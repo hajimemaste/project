@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
-import styles from "./featureSection.module.css";
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/featureSection.module.css";
+import animation from "./styles/animation.module.css";
 
 const FeatureSection = (props) => {
   const listFeature = [
@@ -57,7 +59,7 @@ const FeatureSection = (props) => {
   return (
     <div
       className={`${styles.container} ${
-        scrolled ? styles.action_opacity_close : styles.action_opacity
+        scrolled ? animation.action_opacity_close : animation.action_opacity
       }`}
       ref={sectionRef}
     >
@@ -79,7 +81,7 @@ const FeatureSection = (props) => {
           </div>
           <div
             className={`${styles.box_content} 
-              ${activeIndex !== index ? styles.close : styles.open}`}
+              ${activeIndex !== index ? animation.close : animation.open}`}
           >
             <p className={styles.content}>{feature.sub}</p>
             <div className={styles.list_img}>

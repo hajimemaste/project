@@ -1,0 +1,26 @@
+.action {
+  animation: action 1s ease;
+  transform: translateY(0);
+}
+
+.close {
+  animation: close 1s ease;
+}
+
+@keyframes action {
+  0% {
+    transform: translateY(var(--translate-value));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(var(--translate-value));
+  }
+}

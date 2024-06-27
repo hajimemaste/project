@@ -38,6 +38,17 @@
 @media (max-width: 480px) {
   .btn {
     font-size: 0.8rem;
-    padding: 8px;
+    padding: 12px 18px;
+  }
+}
+
+@media (max-height: 428px) {
+  .btn {
+    font-size: 0.6rem;
+    padding: 8px 14px;
+  }
+
+  .icon {
+    transform: scale(0.6);
   }
 }

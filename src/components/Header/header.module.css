@@ -188,3 +188,14 @@
     font-size: 14px;
   }
 }
+
+@media (max-height: 428px) {
+  #header {
+    position: relative;
+  }
+
+  .sidebar {
+    padding: 20px;
+    overflow: hidden;
+  }
+}

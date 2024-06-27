@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import styles from "./interactiveSection.module.css";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/interactiveSection.module.css";
+import animation from "./styles/animation.module.css";
 
 const InteractiveSection = (props) => {
   const listInteractive = [
@@ -46,7 +48,9 @@ const InteractiveSection = (props) => {
     <div className={styles.container} ref={sectionRef}>
       <h1
         className={`${styles.header} ${
-          scrolledHeader ? styles.action_opacity : styles.action_opacity_close
+          scrolledHeader
+            ? animation.action_opacity
+            : animation.action_opacity_close
         }`}
       >
         Interactive products
@@ -55,7 +59,7 @@ const InteractiveSection = (props) => {
         <div className={styles.content_left}>
           <div
             className={`${styles.content_button} ${
-              scrolled ? styles.action_left : styles.action_left_close
+              scrolled ? animation.action_left : animation.action_left_close
             }`}
           >
             <button
@@ -100,17 +104,15 @@ const InteractiveSection = (props) => {
             </button>
           </div>
           <div
-            className={scrolled ? styles.action_zoom : styles.action_zoom_close}
+            className={
+              scrolled ? animation.action_zoom : animation.action_zoom_close
+            }
           >
             <div className={styles.icon_Arc}>
               <icon.ArcIcon />
             </div>
             <img src={image.imgExclude} alt="" className={styles.img} />
-            <div
-              className={`${styles.text_box_1} ${styles.text_box} ${
-                activeIndex === 1 ? styles.text_change_1 : null
-              }`}
-            >
+            <div className={`${styles.text_box_1} ${styles.text_box}`}>
               something
             </div>
             <div className={`${styles.text_box_2} ${styles.text_box}`}>
@@ -123,12 +125,14 @@ const InteractiveSection = (props) => {
         </div>
 
         <div
-          className={scrolled ? styles.action_left : styles.action_left_close}
+          className={
+            scrolled ? animation.action_left : animation.action_left_close
+          }
         >
           {listInteractive.map((item, index) =>
             activeIndex === index ? (
               <div
-                className={`${styles.content_right} ${styles.action_opacity}`}
+                className={`${styles.content_right} ${animation.action_opacity}`}
                 key={index}
               >
                 <div className={styles.content_box}>

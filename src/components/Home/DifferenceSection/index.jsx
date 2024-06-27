@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Btn, BoxDiff } from "../../atoms";
 import { icon } from "../../../assets/svgs";
-import styles from "./differenceSection.module.css";
+import styles from "./styles/differenceSection.module.css";
+import animation from "./styles/animation.module.css";
 
 import useScrollEffect from "./useScrollEffect";
 
@@ -13,21 +14,23 @@ const DifferenceSection = (props) => {
       <div className={styles.box_left}>
         <h2
           className={`${styles.header} ${
-            scrolledHeader ? styles.action_right : styles.action_right_close
+            scrolledHeader
+              ? animation.action_right
+              : animation.action_right_close
           }`}
         >
           We do things <span>differently</span>
         </h2>
         <div
           className={`${styles.img} ${
-            scrolled ? styles.action_right : styles.action_right_close
+            scrolled ? animation.action_right : animation.action_right_close
           }`}
         ></div>
       </div>
       <div className={styles.box_right}>
         <div
           className={`${styles.content} ${
-            scrolledHeader ? styles.action_left : styles.action_left_close
+            scrolledHeader ? animation.action_left : animation.action_left_close
           }`}
         >
           <Btn
@@ -42,19 +45,19 @@ const DifferenceSection = (props) => {
 
           <div className={styles.sub}>
             <p>
-              Lorem ipsum dolor sit amet <br />
-              consectetur. Pretium odio eu vehicula{" "}
+              Lorem ipsum dolor sit amet consectetur. Pretium odio eu vehicula
             </p>
             <p>
-              Lorem ipsum dolor sit amet <br />
-              consectetur. Pretium odio eu vehicula{" "}
+              Lorem ipsum dolor sit amet consectetur. Pretium odio eu vehicula
             </p>
           </div>
         </div>
         <div className={styles.list_box}>
           <div className={styles.box}>
             <div
-              className={scrolled ? styles.action_up : styles.action_up_close}
+              className={
+                scrolled ? animation.action_up : animation.action_up_close
+              }
               style={{ "--value": "100px" }}
             >
               <BoxDiff
@@ -64,7 +67,9 @@ const DifferenceSection = (props) => {
               />
             </div>
             <div
-              className={scrolled ? styles.action_up : styles.action_up_close}
+              className={
+                scrolled ? animation.action_up : animation.action_up_close
+              }
               style={{ "--value": "150px" }}
             >
               <BoxDiff
@@ -76,7 +81,9 @@ const DifferenceSection = (props) => {
           </div>
           <div className={styles.box}>
             <div
-              className={scrolled ? styles.action_up : styles.action_up_close}
+              className={
+                scrolled ? animation.action_up : animation.action_up_close
+              }
               style={{ "--value": "200px" }}
             >
               <BoxDiff
@@ -86,7 +93,9 @@ const DifferenceSection = (props) => {
               />
             </div>
             <div
-              className={scrolled ? styles.action_up : styles.action_up_close}
+              className={
+                scrolled ? animation.action_up : animation.action_up_close
+              }
               style={{ "--value": "250px" }}
             >
               <BoxDiff

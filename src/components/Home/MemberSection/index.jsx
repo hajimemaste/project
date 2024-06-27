@@ -1,9 +1,11 @@
 import React from "react";
-import styles from "./memberSection.module.css";
 
 import { image } from "../../../assets/images";
 import { Btn } from "../../atoms";
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/memberSection.module.css";
+import animation from "./styles/animation.module.css";
 
 const MemberSection = (props) => {
   const members = [
@@ -20,7 +22,9 @@ const MemberSection = (props) => {
   return (
     <div className={styles.container} ref={sectionRef}>
       <div
-        className={`${styles.card} ${scrolled ? styles.action : styles.close}`}
+        className={`${styles.card} ${
+          scrolled ? animation.action : animation.close
+        }`}
         style={{ "--translate-value": "100px" }}
       >
         <h1 className={styles.header}>Our Team</h1>
@@ -29,7 +33,7 @@ const MemberSection = (props) => {
       {members.map((member, index) => (
         <div
           className={`${styles.card_member} ${
-            scrolled ? styles.action : styles.close
+            scrolled ? animation.action : animation.close
           }`}
           key={index}
           style={{
@@ -44,7 +48,9 @@ const MemberSection = (props) => {
         </div>
       ))}
       <div
-        className={`${styles.card} ${scrolled ? styles.action : styles.close}`}
+        className={`${styles.card} ${
+          scrolled ? animation.action : animation.close
+        }`}
         style={{ alignItems: "end", "--translate-value": "800px" }}
       >
         <div className={styles.content_box}>
@@ -65,6 +71,7 @@ const MemberSection = (props) => {
           size="12px 35px"
         />
       </div>
+      <div className={styles.box_responsive}></div>
     </div>
   );
 };

@@ -1,10 +1,10 @@
 .container {
   width: 100%;
-  padding: 100px 48px;
+  padding: 70px 48px;
 
   display: flex;
   flex-direction: column;
-  gap: 108px;
+  gap: 48px;
   align-items: center;
   overflow: hidden;
 }
@@ -133,159 +133,30 @@
   top: 0;
 }
 
-/* Animation zoom */
-
-.action_zoom {
-  animation: slideZoom 1s ease;
-}
-
-.action_zoom_close {
-  animation: slideZoomClose 1s ease;
-  opacity: 0;
-  transform: scale(0);
-}
-
-@keyframes slideZoom {
-  from {
-    opacity: 0;
-    transform: scale(0);
-    transform-origin: center;
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slideZoomClose {
-  from {
-    opacity: 1;
-    transform: scale(1);
-    transform-origin: center;
-  }
-
-  to {
-    opacity: 0;
-    transform: scale(0);
-  }
-}
-
-/* Animation opacity */
-
-.action_opacity {
-  animation: slideOpacity 1s ease-in;
-}
-
-.action_opacity_close {
-  animation: slideOpacityClose 1s ease-in;
-  opacity: 0;
-}
-
-@keyframes slideOpacity {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideOpacityClose {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-/* Animation Rigth */
-
-.action_right {
-  animation: slideRight 1s ease-in;
-}
-
-.action_right_close {
-  animation: slideRightClose 1s ease-in;
-  opacity: 0;
-  transform: translateX(-100%);
-}
-
-@keyframes slideRight {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideRightClose {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-}
-
-@media (max-width: 1400px) {
-  .container {
-    height: auto;
-  }
-
-  .slider {
-    width: 33%;
-  }
-
-  .navigator {
-    gap: 10%;
-  }
-}
-
 /* Responsive */
 
-@media (max-width: 1236px) {
+@media (max-width: 1280px) {
   .content_img {
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
 
   .card {
     gap: 24px;
   }
 
-  .action_zoom_close {
-    animation: slideZoomClose 1s ease;
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  @keyframes slideZoom {
-    from {
-      opacity: 0;
-      transform: scale(0);
-      transform-origin: center;
-    }
-
-    to {
-      opacity: 1;
-      transform: scale(0.8);
-    }
+  .content {
+    gap: 20px;
   }
 }
 
 @media (max-width: 1060px) {
+  .container {
+    gap: 0;
+  }
+
   .content {
     flex-direction: column-reverse;
+    gap: 0;
   }
 
   .slider {
@@ -338,38 +209,13 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 100px 24px 56px;
+    padding: 70px 24px 56px;
+    gap: 20px;
   }
 
   .header {
     font-size: 44px;
-  }
-
-  .container {
-    gap: 0px;
-  }
-
-  .content_img {
-    transform: scale(0.6);
-  }
-
-  .action_zoom_close {
-    animation: slideZoomClose 1s ease;
-    opacity: 0;
-    transform: scale(0.6);
-  }
-
-  @keyframes slideZoom {
-    from {
-      opacity: 0;
-      transform: scale(0);
-      transform-origin: center;
-    }
-
-    to {
-      opacity: 1;
-      transform: scale(0.6);
-    }
+    line-height: 44px;
   }
 
   .card {
@@ -379,23 +225,11 @@
 
 @media (max-width: 480px) {
   .container {
-    padding: 60px 24px 56px;
+    padding: 70px 24px 0;
   }
 
   .header {
     font-size: 36px;
-    line-height: 0;
-    margin-bottom: -48px;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-  }
-
-  .container {
-    gap: 32px;
-    padding: 116px 24px 0 24px;
   }
 
   .card_header {
@@ -408,8 +242,23 @@
     }
   }
 
+  .content {
+    transform: translateY(-60px);
+    gap: 30px;
+  }
+
   .card_content {
     font-size: 12px;
+  }
+
+  .navigator {
+    gap: 0px;
+    justify-content: space-between;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
   }
 
   .content_img {
@@ -417,26 +266,41 @@
     height: 224px;
   }
 
-  .action_zoom_close {
-    animation: slideZoomClose 1s ease;
-    opacity: 0;
-    transform: scale(0.36);
-  }
-
-  @keyframes slideZoom {
-    from {
-      opacity: 0;
-      transform: scale(0);
-      transform-origin: center;
-    }
-
-    to {
-      opacity: 1;
-      transform: scale(0.36);
-    }
-  }
-
   .card {
     gap: 12px;
+  }
+}
+
+@media (max-height: 428px) {
+  .container {
+    padding: 20px 20px;
+    gap: 0;
+  }
+
+  .header {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .content {
+    margin-top: -100px;
+    gap: 0;
+  }
+
+  .slider {
+    margin-top: -80px;
+  }
+
+  .content_img {
+    transform: scale(0.45);
+  }
+
+  .card_header {
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
   }
 }

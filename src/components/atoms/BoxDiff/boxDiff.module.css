@@ -68,7 +68,7 @@
 
 @media (max-width: 1200px) {
   .box {
-    width: 320px;
+    width: 100%;
   }
 }
 
@@ -95,7 +95,6 @@
 
 @media (max-width: 768px) {
   .box {
-    width: 180px;
     height: 180px;
   }
 
@@ -116,7 +115,6 @@
 
 @media (max-width: 480px) {
   .box {
-    width: 120px;
     height: 140px;
     padding: 12px;
   }
@@ -130,12 +128,12 @@
     gap: 4px;
 
     h1 {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 18px;
     }
 
     p {
-      font-size: 10px;
+      font-size: 12px;
       line-height: 12px;
     }
   }

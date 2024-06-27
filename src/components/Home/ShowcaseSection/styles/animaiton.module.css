@@ -1,0 +1,176 @@
+/* Animation zoom */
+
+.action_zoom {
+  animation: slideZoom 1s ease;
+}
+
+.action_zoom_close {
+  animation: slideZoomClose 1s ease;
+  opacity: 0;
+  transform: scale(0);
+}
+
+@keyframes slideZoom {
+  from {
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: center;
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideZoomClose {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: center;
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Animation opacity */
+
+.action_opacity {
+  animation: slideOpacity 1s ease-in;
+}
+
+.action_opacity_close {
+  animation: slideOpacityClose 1s ease-in;
+  opacity: 0;
+}
+
+@keyframes slideOpacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOpacityClose {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Animation Rigth */
+
+.action_right {
+  animation: slideRight 1s ease-in;
+}
+
+.action_right_close {
+  animation: slideRightClose 1s ease-in;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRightClose {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    height: auto;
+  }
+
+  .slider {
+    width: 33%;
+  }
+
+  .navigator {
+    gap: 10%;
+  }
+}
+
+@media (max-width: 1236px) {
+  .action_zoom_close {
+    animation: slideZoomClose 1s ease;
+    opacity: 0;
+    transform: scale(0.6);
+  }
+
+  @keyframes slideZoom {
+    from {
+      opacity: 0;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(0.6);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 70px 24px 56px;
+    gap: 20px;
+  }
+
+  .header {
+    font-size: 44px;
+    line-height: 44px;
+  }
+
+  .card {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .action_zoom_close {
+    animation: slideZoomClose 1s ease;
+    opacity: 0;
+    transform: scale(0.36);
+  }
+
+  @keyframes slideZoom {
+    from {
+      opacity: 0;
+      transform: scale(0);
+      transform-origin: center;
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(0.36);
+    }
+  }
+}

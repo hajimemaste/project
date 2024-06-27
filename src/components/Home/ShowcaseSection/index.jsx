@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import styles from "./showcaseSection.module.css";
 import { icon } from "../../../assets/svgs";
 import { image } from "../../../assets/images";
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/showcaseSection.module.css";
+import animation from "./styles/animaiton.module.css";
 
 const ShowcaseSection = (props) => {
   const slides = [
@@ -62,7 +64,9 @@ const ShowcaseSection = (props) => {
     <div className={styles.container} ref={sectionRef}>
       <h1
         className={`${styles.header} ${
-          scrolledHeader ? styles.action_opacity : styles.action_opacity_close
+          scrolledHeader
+            ? animation.action_opacity
+            : animation.action_opacity_close
         }`}
       >
         Show case
@@ -70,7 +74,7 @@ const ShowcaseSection = (props) => {
       <div className={styles.content}>
         <div
           className={`${styles.slider} ${
-            scrolled ? styles.action_right : styles.action_right_close
+            scrolled ? animation.action_right : animation.action_right_close
           }`}
         >
           <div className={styles.card}>
@@ -106,7 +110,7 @@ const ShowcaseSection = (props) => {
         </div>
         <div
           className={`${styles.content_img} ${
-            scrolled ? styles.action_zoom : styles.action_zoom_close
+            scrolled ? animation.action_zoom : animation.action_zoom_close
           }`}
         >
           <img src={image.bgShowcase} alt="" className={styles.bgShowcase} />

@@ -23,7 +23,7 @@ const Btn = (props) => {
   return (
     <button className={styles.btn} style={style}>
       <p>{title}</p>
-      {isIcon && icon}
+      <div className={styles.icon}>{isIcon && icon}</div>
     </button>
   );
 };

@@ -1,4 +1,4 @@
-@import "../../../styles/variables.css";
+@import "../../../../styles/variables.css";
 
 .container {
   padding: 100px 48px;
@@ -96,71 +96,6 @@
   }
 }
 
-.open {
-  animation: open 0.5s ease-in;
-  opacity: 1;
-  height: 100%;
-}
-
-.close {
-  animation: close 0.5s ease-in;
-  opacity: 0;
-  height: 0;
-}
-
-@keyframes open {
-  0% {
-    opacity: 0;
-    height: 0;
-  }
-
-  100% {
-    opacity: 1;
-    height: 540px;
-  }
-}
-
-@keyframes close {
-  0% {
-    opacity: 1;
-    height: 540px;
-  }
-
-  100% {
-    opacity: 0;
-    height: 0;
-  }
-}
-
-/* Animation Opacity */
-
-.action_opacity {
-  animation: slideOpacity 1s ease;
-}
-
-.action_opacity_close {
-  animation: slideOpacityClose 1s ease;
-  opacity: 0.5;
-}
-
-@keyframes slideOpacity {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes slideOpacityClose {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-
 /* Responsive */
 
 @media (max-width: 1200px) {
@@ -226,7 +161,7 @@
 @media (max-width: 480px) {
   .container {
     gap: 12px;
-    padding: 70px 24px 56px;
+    padding: 70px 0 56px;
   }
 
   .header {
@@ -239,7 +174,7 @@
   }
 
   .item {
-    padding-bottom: 6px;
+    padding: 0px 12px 10px;
   }
 
   .list_img {
@@ -248,6 +183,7 @@
   }
 
   .id {
+    width: 20px;
     font-size: 12px;
   }
 
@@ -257,7 +193,7 @@
   }
 
   .box_content {
-    margin-left: 50px;
+    margin-left: 30px;
     padding-top: 8px;
     gap: 18px;
   }
@@ -270,6 +206,56 @@
     img {
       height: 180px;
     }
+  }
+
+  .img_2 {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+
+    img {
+      height: 224px;
+    }
+  }
+}
+
+@media (max-height: 428px) {
+  .container {
+    padding: 24px 0;
+    gap: 12px;
+  }
+
+  .id {
+    width: 20px;
+    font-size: 12px;
+  }
+
+  .box_content {
+    margin-left: 30px;
+    padding-top: 8px;
+    gap: 18px;
+  }
+
+  .header {
+    gap: 8px;
+
+    h1 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  .item {
+    padding: 0px 12px 10px;
+  }
+
+  .content {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .list_img {
+    flex-direction: row;
   }
 
   .img_2 {
