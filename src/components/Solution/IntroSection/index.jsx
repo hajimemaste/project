@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from "./introSection.module.css";
 import { icon } from "../../../assets/svgs";
 
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/introSection.module.css";
+import animation from "./styles/animation.module.css";
 
 const IntroSection = (props) => {
   const { scrolled, sectionRef } = useScrollEffect();
@@ -12,7 +14,7 @@ const IntroSection = (props) => {
       <h1 className={styles.header}>Lorem ipsum dolor sit amet consectetur.</h1>
       <div
         className={`${styles.content} ${
-          !scrolled ? styles.action_up : styles.action_up_close
+          !scrolled ? animation.action_up : animation.action_up_close
         }`}
       >
         <p className={styles.sub}>

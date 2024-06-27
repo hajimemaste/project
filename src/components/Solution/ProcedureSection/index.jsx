@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
-import styles from "./procedureSection.module.css";
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/procedureSection.module.css";
+import animation from "./styles/animation.module.css";
 
 const ProcedureSection = (props) => {
   const { scrolled, scrolledHeader, scrolledClose, sectionRef } =
@@ -10,8 +12,8 @@ const ProcedureSection = (props) => {
     <div
       className={`${styles.container} ${
         scrolledClose
-          ? styles.action_background
-          : styles.action_background_close
+          ? animation.action_background
+          : animation.action_background_close
       }`}
       ref={sectionRef}
     >
@@ -19,15 +21,11 @@ const ProcedureSection = (props) => {
         <h1
           className={`${styles.header_text} ${
             scrolledHeader
-              ? styles.action_header_start
-              : styles.action_header_end
+              ? animation.action_header_start
+              : animation.action_header_end
           }`}
         >
-          Our product{" "}
-          <span>
-            receiving and <br />
-            fulfillment process
-          </span>
+          Our product <span>receiving and fulfillment process</span>
         </h1>
         <h2 className={styles.sub}>HOW IT WORK</h2>
       </div>
@@ -37,7 +35,7 @@ const ProcedureSection = (props) => {
             <div className={styles.box_content}>
               <div
                 className={`${styles.container_content} ${
-                  scrolled ? styles.action_down : styles.action_down_close
+                  scrolled ? animation.action_down : animation.action_down_close
                 }`}
               >
                 <div className={styles.content_header}>
@@ -54,7 +52,9 @@ const ProcedureSection = (props) => {
               <div className={`${styles.dot} ${styles.dot_2} `}></div>
               <div
                 className={`${styles.box_line} ${
-                  scrolled ? styles.action_border : styles.action_border_close
+                  scrolled
+                    ? animation.action_border
+                    : animation.action_border_close
                 } `}
               ></div>
             </div>
@@ -63,7 +63,7 @@ const ProcedureSection = (props) => {
             <div className={styles.box_content}>
               <div
                 className={`${styles.container_content} ${
-                  scrolled ? styles.action_down : styles.action_down_close
+                  scrolled ? animation.action_down : animation.action_down_close
                 }`}
               >
                 <div className={styles.content_header}>
@@ -78,12 +78,16 @@ const ProcedureSection = (props) => {
               </div>
               <div
                 className={`${styles.dot} ${styles.dot_4} ${
-                  scrolled ? styles.action_opacity : styles.action_opacity_close
+                  scrolled
+                    ? animation.action_opacity
+                    : animation.action_opacity_close
                 }`}
               ></div>
               <div
                 className={`${styles.box_line} ${
-                  scrolled ? styles.action_border : styles.action_border_close
+                  scrolled
+                    ? animation.action_border
+                    : animation.action_border_close
                 } `}
               ></div>
             </div>
@@ -91,7 +95,7 @@ const ProcedureSection = (props) => {
         </div>
         <div
           className={`${styles.line} ${
-            scrolled ? styles.action_width : styles.action_width_close
+            scrolled ? animation.action_width : animation.action_width_close
           }`}
         ></div>
         <div className={styles.line_2}>
@@ -99,7 +103,7 @@ const ProcedureSection = (props) => {
             <div className={styles.box_content}>
               <div
                 className={`${styles.container_content} ${
-                  scrolled ? styles.action_up : styles.action_up_close
+                  scrolled ? animation.action_up : animation.action_up_close
                 }`}
               >
                 <div className={styles.content_header}>
@@ -115,7 +119,9 @@ const ProcedureSection = (props) => {
               <div className={`${styles.dot} ${styles.dot_1} `}></div>
               <div
                 className={`${styles.box_line_bottom} ${
-                  scrolled ? styles.action_border : styles.action_border_close
+                  scrolled
+                    ? animation.action_border
+                    : animation.action_border_close
                 } `}
               ></div>
             </div>
@@ -124,7 +130,7 @@ const ProcedureSection = (props) => {
             <div className={styles.box_content}>
               <div
                 className={`${styles.container_content} ${
-                  scrolled ? styles.action_up : styles.action_up_close
+                  scrolled ? animation.action_up : animation.action_up_close
                 }`}
               >
                 <div className={styles.content_header}>
@@ -139,12 +145,16 @@ const ProcedureSection = (props) => {
               </div>
               <div
                 className={`${styles.dot} ${styles.dot_3} ${
-                  scrolled ? styles.action_opacity : styles.action_opacity_close
+                  scrolled
+                    ? animation.action_opacity
+                    : animation.action_opacity_close
                 }`}
               ></div>
               <div
                 className={`${styles.box_line_bottom} ${
-                  scrolled ? styles.action_border : styles.action_border_close
+                  scrolled
+                    ? animation.action_border
+                    : animation.action_border_close
                 } `}
               ></div>
             </div>
@@ -155,7 +165,7 @@ const ProcedureSection = (props) => {
       <div className={styles.content_responsive}>
         <div
           className={`${styles.line} ${
-            scrolled ? styles.action_width : styles.action_width_close
+            scrolled ? animation.action_width : animation.action_width_close
           }`}
         ></div>
 
@@ -163,7 +173,7 @@ const ProcedureSection = (props) => {
           <div className={styles.box_content}>
             <div
               className={`${styles.container_content} ${
-                scrolled ? styles.action_up : styles.action_up_close
+                scrolled ? animation.action_up : animation.action_up_close
               }`}
             >
               <div className={styles.content_header}>
@@ -184,7 +194,7 @@ const ProcedureSection = (props) => {
           <div className={styles.box_content}>
             <div
               className={`${styles.container_content} ${
-                scrolled ? styles.action_down : styles.action_down_close
+                scrolled ? animation.action_down : animation.action_down_close
               }`}
             >
               <div className={styles.content_header}>
@@ -206,7 +216,7 @@ const ProcedureSection = (props) => {
           <div className={styles.box_content}>
             <div
               className={`${styles.container_content} ${
-                scrolled ? styles.action_up : styles.action_up_close
+                scrolled ? animation.action_up : animation.action_up_close
               }`}
             >
               <div className={styles.content_header}>
@@ -221,7 +231,9 @@ const ProcedureSection = (props) => {
             </div>
             <div
               className={`${styles.dot} ${styles.dot_1} ${
-                scrolled ? styles.action_opacity : styles.action_opacity_close
+                scrolled
+                  ? animation.action_opacity
+                  : animation.action_opacity_close
               }`}
             ></div>
           </div>
@@ -231,7 +243,7 @@ const ProcedureSection = (props) => {
           <div className={styles.box_content}>
             <div
               className={`${styles.container_content} ${
-                scrolled ? styles.action_down : styles.action_down_close
+                scrolled ? animation.action_down : animation.action_down_close
               }`}
             >
               <div className={styles.content_header}>
@@ -246,7 +258,9 @@ const ProcedureSection = (props) => {
             </div>
             <div
               className={`${styles.dot} ${styles.dot_1} ${
-                scrolled ? styles.action_opacity : styles.action_opacity_close
+                scrolled
+                  ? animation.action_opacity
+                  : animation.action_opacity_close
               }`}
             ></div>
           </div>

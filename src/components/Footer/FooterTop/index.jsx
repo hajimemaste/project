@@ -20,7 +20,7 @@ const FooterTop = (props) => {
           <div className={styles.browse}>
             <p>Browse</p>
             <div className={styles.list_browse}>
-              <a href="/about">About us</a>
+              <a href="/aboutus">About us</a>
               <a href="#">Project</a>
               <a href="#">Contact</a>
             </div>

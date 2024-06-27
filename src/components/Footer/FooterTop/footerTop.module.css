@@ -162,3 +162,13 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 428px) {
+  .browse {
+    flex-direction: column;
+  }
+
+  .contact {
+    flex-direction: column;
+  }
+}

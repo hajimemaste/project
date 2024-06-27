@@ -1,11 +1,11 @@
-@import "../../styles/variables.css";
+@import "../../../styles/variables.css";
 
 .cta {
   padding: 267px 0;
   width: 100%;
   position: relative;
   overflow: hidden;
-  background-image: url(../../assets/images/bgCta.png);
+  background-image: url(../../../assets/images/bgCta.png);
   background-position-y: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,6 +15,7 @@
 }
 
 .box {
+  width: 100%;
   z-index: 1000;
 
   display: flex;
@@ -25,6 +26,8 @@
 }
 
 .content {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   gap: 18px;
@@ -68,69 +71,6 @@
   }
 }
 
-/* Animation Opacity */
-
-.action_opacity {
-  animation: slideOpacity 1s ease;
-}
-
-.action_opacity_close {
-  animation: slideOpacityClose 1s ease-in;
-  opacity: 0.3;
-}
-
-@keyframes slideOpacity {
-  from {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideOpacityClose {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.3;
-  }
-}
-
-/* Animation Up */
-
-.action_up {
-  animation: slideUp 1s ease;
-}
-
-.action_up_close {
-  animation: slideUpClose 1s ease-in;
-  opacity: 0;
-  transform: translateY(100px);
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUpClose {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-}
-
 @media (max-width: 1200px) {
   .cta {
     background-position: center;
@@ -169,7 +109,7 @@
 
 @media (max-width: 480px) {
   .cta {
-    padding: 100px 0;
+    padding: 100px 10px;
   }
 
   .box {
@@ -182,14 +122,36 @@
   }
 
   .sub {
+    width: 100%;
     font-size: 12px;
   }
 
   .form {
+    width: 100%;
     flex-direction: column;
   }
 
   .img {
     transform: translateY(30px);
+  }
+}
+
+@media (max-height: 428px) {
+  .cta {
+    height: 100vh;
+    padding: 10px 20px;
+  }
+
+  .header {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .sub {
+    font-size: 12px;
+  }
+
+  .form {
+    flex-direction: row;
   }
 }

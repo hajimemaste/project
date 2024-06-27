@@ -71,9 +71,46 @@
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 1400px) {
   .card {
     width: 200px;
-    height: 390px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 145px;
+    height: 300px;
+  }
+
+  .infomation {
+    gap: 3px;
+    left: 8px;
+    top: 8px;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .box {
+    gap: 4px;
+  }
+
+  .name {
+    font-size: 14px;
+  }
+
+  .job {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 120px;
+    height: 230px;
   }
 }

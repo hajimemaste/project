@@ -71,16 +71,16 @@
 }
 
 .box_1 {
-  background-image: url(../../../assets/images/bgPara_1.png);
+  background-image: url(../../../../assets/images/bgPara_1.png);
 }
 .box_2 {
-  background-image: url(../../../assets/images/bgPara_2.png);
+  background-image: url(../../../../assets/images/bgPara_2.png);
 }
 .box_3 {
-  background-image: url(../../../assets/images/bgPara_3.png);
+  background-image: url(../../../../assets/images/bgPara_3.png);
 }
 .box_4 {
-  background-image: url(../../../assets/images/bgPara_4.png);
+  background-image: url(../../../../assets/images/bgPara_4.png);
 }
 
 .box_header {
@@ -144,121 +144,6 @@
   font-weight: 400;
   line-height: 19.2px;
   text-align: center;
-}
-
-/* Animation Opacity */
-
-.action_opacity {
-  animation: slideOpacity 1s ease-in;
-}
-
-.action_opacity_close {
-  animation: slideOpacityClose 1s ease-in;
-  opacity: 0;
-}
-
-@keyframes slideOpacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideOpacityClose {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-
-/* Animation height background */
-
-.action_background {
-  animation: slideBackground 1s ease;
-}
-
-.action_background::before {
-  animation: slideOpacity 1s ease-in;
-}
-
-.action_background_close {
-  animation: slideBackgroundClose 1s ease;
-  background-size: 100% var(--height);
-  opacity: 0.5;
-}
-
-.action_background_close::before {
-  animation: slideOpacityClose 1s ease-in;
-  opacity: 0;
-}
-
-@keyframes slideBackground {
-  from {
-    opacity: 0.5;
-    background-size: 100% var(--height);
-  }
-  to {
-    opacity: 1;
-    background-size: 100% 100%;
-  }
-}
-
-@keyframes slideBackgroundClose {
-  from {
-    opacity: 1;
-    background-size: cover;
-  }
-  to {
-    opacity: 0.5;
-    background-size: 100% var(--height);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Animation Close */
-
-.action_close {
-  animation: slideClose 1s ease-in;
-  opacity: 0.5;
-  transform: translateY(-50px);
-}
-
-.action_open {
-  animation: slideOpen 1s ease-in;
-}
-
-@keyframes slideClose {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0.5;
-    transform: translateY(-50px);
-  }
-}
-
-@keyframes slideOpen {
-  from {
-    opacity: 0.5;
-    transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 1350px) {
@@ -362,5 +247,87 @@
     p {
       font-size: 14px;
     }
+  }
+}
+
+@media (max-width: 320px) {
+  .header_left {
+    h1 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+
+  .sub {
+    font-size: 14px;
+  }
+
+  .box_end_right {
+    gap: 8px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .box {
+    padding: 12px;
+    height: 220px;
+  }
+
+  .box_header {
+    font-size: 48px;
+  }
+
+  .box_sub {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 428px) {
+  .container {
+    padding: 10px 20px;
+  }
+
+  .header_left {
+    h1 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+  }
+
+  .sub {
+    font-size: 14px;
+  }
+
+  .box_end_right {
+    gap: 8px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 28px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .box {
+    padding: 12px;
+    height: 220px;
+  }
+
+  .box_header {
+    font-size: 48px;
+  }
+
+  .box_sub {
+    font-size: 20px;
   }
 }

@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { image } from "../../assets/images";
 import { InputText, Btn } from "../atoms";
-import styles from "./callToAction.module.css";
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/callToAction.module.css";
+import animation from "./styles/animation.module.css";
 
 const CallToAction = (props) => {
   const [inputValue, setInputValue] = useState("");
@@ -16,13 +18,13 @@ const CallToAction = (props) => {
   return (
     <section
       className={`${styles.cta} ${
-        scrolled ? styles.action_opacity : styles.action_opacity_close
+        scrolled ? animation.action_opacity : animation.action_opacity_close
       }`}
       ref={sectionRef}
     >
       <div
         className={`${styles.box} ${
-          scrolled ? styles.action_up : styles.action_up_close
+          scrolled ? animation.action_up : animation.action_up_close
         }`}
       >
         <div className={styles.content}>

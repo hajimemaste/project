@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import styles from "./customerSection.module.css";
 import { image } from "../../../assets/images";
 import Card from "./Card";
 import useScrollEffect from "./useScrollEffect";
+
+import styles from "./styles/customerSection.module.css";
+import animation from "./styles/animation.module.css";
 
 const CustomerSection = (props) => {
   const customers = [
@@ -38,13 +40,15 @@ const CustomerSection = (props) => {
   return (
     <div
       className={`${styles.container} ${
-        scrolledClose ? styles.action_close_opacity : styles.action_open_opacity
+        scrolledClose
+          ? animation.action_close_opacity
+          : animation.action_open_opacity
       }`}
       ref={sectionRef}
     >
       <div
         className={`${styles.header} ${
-          scrolled ? styles.action_up : styles.action_up_close
+          scrolled ? animation.action_up : animation.action_up_close
         }`}
       >
         <h1> What do customers say about us?</h1>
@@ -62,14 +66,14 @@ const CustomerSection = (props) => {
             className={`${
               index % 2 !== 0
                 ? scrolledClose
-                  ? styles.action_upImg
-                  : styles.action_upImg_close
+                  ? animation.action_upImg
+                  : animation.action_upImg_close
                 : null
             } ${
               index % 2 === 0
                 ? scrolled
-                  ? styles.action_opacity
-                  : styles.action_opacity_close
+                  ? animation.action_opacity
+                  : animation.action_opacity_close
                 : null
             }`}
           >
@@ -80,6 +84,28 @@ const CustomerSection = (props) => {
             />
           </div>
         ))}
+      </div>
+      <div className={styles.content_res}>
+        {customers.map((customer, index) => (
+          <div
+            key={index}
+            className={
+              scrolledClose
+                ? animation.action_upImg
+                : animation.action_upImg_close
+            }
+          >
+            <Card
+              avatar={customer.avatar}
+              name={customer.name}
+              job={customer.job}
+            />
+          </div>
+        ))}
+
+        <div className={`${styles.box_res} ${styles.box_res_1}`}></div>
+        <div className={`${styles.box_res} ${styles.box_res_2}`}></div>
+        <div className={`${styles.box_res} ${styles.box_res_3}`}></div>
       </div>
     </div>
   );
