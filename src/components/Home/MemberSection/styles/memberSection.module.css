@@ -118,7 +118,8 @@
     display: none;
   }
   .container {
-    gap: 40px;
+    gap: 30px;
+    padding: 70px 24px;
   }
 
   .card {
@@ -143,6 +144,10 @@
 }
 
 @media (max-width: 900px) {
+  .container {
+    gap: 20px;
+  }
+
   .header {
     font-size: 48px;
   }
@@ -259,7 +264,7 @@
 
 @media (max-width: 480px) {
   .container {
-    gap: 20px;
+    gap: 12px;
     padding: 70px 24px 56px;
   }
 
@@ -384,6 +389,436 @@
 }
 
 @media (max-height: 320px) {
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 1280px) {
+  .container {
+    gap: 30px;
+  }
+
+  .card {
+    width: 273px;
+  }
+
+  .card_member {
+    width: 273px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 1194px) {
+  .card {
+    width: 260px;
+  }
+
+  .card_member {
+    width: 260px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 1180px) {
+  .card {
+    width: 260px;
+  }
+
+  .card_member {
+    width: 260px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 1114px) {
+  .card {
+    width: 244px;
+  }
+
+  .card_member {
+    width: 244px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 1104px) {
+  .card {
+    width: 240px;
+  }
+
+  .card_member {
+    width: 240px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 1024px) {
+  .card {
+    width: 220px;
+  }
+
+  .card_member {
+    width: 220px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 915px) {
+  .card {
+    width: 195px;
+  }
+
+  .card_member {
+    width: 195px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 884px) {
+  .card {
+    width: 190px;
+  }
+
+  .card_member {
+    width: 190px;
+  }
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 880px) {
+  .card {
+    width: 195px;
+  }
+
+  .card_member {
+    width: 195px;
+  }
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 851px) {
+  .card {
+    width: 187px;
+  }
+
+  .card_member {
+    width: 187px;
+  }
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 834px) {
+  .card {
+    width: 248px;
+  }
+
+  .card_member {
+    width: 248px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 248px;
+  }
+}
+
+@media (width: 833px) {
+  .card {
+    width: 248px;
+  }
+
+  .card_member {
+    width: 248px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 248px;
+  }
+}
+
+@media (width: 820px) {
+  .card {
+    width: 244px;
+  }
+
+  .card_member {
+    width: 244px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 244px;
+  }
+}
+
+@media (width: 806px) {
+  .card {
+    width: 242px;
+  }
+
+  .card_member {
+    width: 242px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 242px;
+  }
+}
+
+@media (width: 804px) {
+  .card {
+    width: 176px;
+  }
+
+  .card_member {
+    width: 176px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 800px) {
+  .card {
+    width: 237px;
+  }
+
+  .card_member {
+    width: 237px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 237px;
+  }
+}
+
+@media (width: 780px) {
+  .card {
+    width: 170px;
+  }
+
+  .card_member {
+    width: 170px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 768px) {
+  .card {
+    width: 226px;
+  }
+
+  .card_member {
+    width: 226px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 226px;
+  }
+}
+
+@media (width: 760px) {
+  .card {
+    width: 226px;
+  }
+
+  .card_member {
+    width: 226px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 226px;
+  }
+}
+
+@media (width: 731px) {
+  .card {
+    width: 217px;
+  }
+
+  .card_member {
+    width: 217px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 217px;
+  }
+}
+
+@media (width: 702px) {
+  .card {
+    width: 207px;
+  }
+
+  .card_member {
+    width: 207px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 207px;
+  }
+}
+
+@media (width: 568px) {
+  .card {
+    width: 162px;
+  }
+
+  .card_member {
+    width: 162px;
+  }
+
+  .box_responsive {
+    display: block;
+    width: 162px;
+  }
+}
+
+@media (width: 428px) {
+  .card {
+    width: 184px;
+  }
+
+  .card_member {
+    width: 184px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 414px) {
+  .card {
+    width: 177px;
+  }
+
+  .card_member {
+    width: 177px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 412px) {
+  .card {
+    width: 175px;
+  }
+
+  .card_member {
+    width: 175px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 393px) {
+  .card {
+    width: 166px;
+  }
+
+  .card_member {
+    width: 166px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 390px) {
+  .card {
+    width: 165px;
+  }
+
+  .card_member {
+    width: 165px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 375px) {
+  .card {
+    width: 157px;
+  }
+
+  .card_member {
+    width: 157px;
+  }
+
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 360px) {
+  .card {
+    width: 150px;
+  }
+
+  .card_member {
+    width: 150px;
+  }
+  .box_responsive {
+    display: none;
+  }
+}
+
+@media (width: 320px) {
+  .card {
+    width: 130px;
+  }
+
+  .card_member {
+    width: 130px;
+  }
+
   .box_responsive {
     display: none;
   }

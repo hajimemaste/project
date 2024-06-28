@@ -54,7 +54,6 @@
 
 @media (max-width: 1400px) {
   .container {
-    padding: 70px 24px;
     gap: 30px;
   }
 
@@ -70,6 +69,12 @@
 
   .box_res {
     width: 264px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding: 70px 24px;
   }
 }
 
