@@ -265,7 +265,7 @@
 @media (max-width: 480px) {
   .container {
     gap: 12px;
-    padding: 70px 24px 56px;
+    padding: 70px 24px;
   }
 
   .card {

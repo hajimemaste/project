@@ -99,6 +99,10 @@
 /* Responsive */
 
 @media (max-width: 1200px) {
+  .container {
+    padding: 70px 24px;
+  }
+
   .content {
     width: 100%;
   }

@@ -213,6 +213,10 @@
 /* Responsive */
 
 @media (max-width: 1200px) {
+  .container {
+    padding: 70px 24px 56px;
+  }
+
   .content_left {
     min-width: 300px;
     overflow: hidden;
@@ -291,7 +295,6 @@
 @media (max-width: 768px) {
   .container {
     gap: 40px;
-    padding: 70px 24px 56px;
   }
 
   .content_left {

@@ -6,7 +6,7 @@
   background: var(--color-black);
 }
 
-@media (max-width: 615px) {
+@media (max-width: 1200px) {
   #footer {
     padding: 12px 24px;
   }

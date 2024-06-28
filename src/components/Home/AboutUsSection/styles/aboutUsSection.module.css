@@ -133,6 +133,11 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .content {
+    padding: 24px;
+  }
+}
 
 @media (max-width: 1024px) {
   .header {
@@ -163,10 +168,6 @@
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .content {
-    padding: 24px;
-  }
-
   .box {
     text-align: center;
   }

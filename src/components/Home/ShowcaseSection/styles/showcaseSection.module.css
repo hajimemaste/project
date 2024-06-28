@@ -149,6 +149,12 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .container {
+    padding: 70px 24px;
+  }
+}
+
 @media (max-width: 1060px) {
   .container {
     gap: 0;
@@ -209,7 +215,6 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 70px 24px 56px;
     gap: 20px;
   }
 
