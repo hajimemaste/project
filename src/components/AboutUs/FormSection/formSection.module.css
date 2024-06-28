@@ -302,3 +302,79 @@
     }
   }
 }
+
+@media (max-height: 428px) {
+  .container {
+    padding: 10px 20px;
+    flex-direction: column;
+    background-position-y: 162vh;
+    gap: 40px;
+  }
+
+  .form {
+    gap: 20px;
+  }
+
+  .header {
+    h1 {
+      font-size: 28px;
+      line-height: 30px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .box {
+    gap: 12px;
+
+    input {
+      padding: 14px 18px;
+      font-size: 14px;
+
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .inputDescription {
+    font-size: 14px;
+    padding: 14px 18px;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  .information {
+    width: 100%;
+  }
+
+  .information_header {
+    gap: 12px;
+  }
+
+  .information_content {
+    gap: 15px;
+  }
+}
+
+@media (max-height: 414px) {
+  .container {
+    background-position-y: 170vh;
+  }
+}
+
+@media (max-height: 375px) {
+  .container {
+    background-position-y: 180vh;
+  }
+}
+
+@media (max-height: 320px) {
+  .container {
+    background-position-y: 214vh;
+  }
+}
