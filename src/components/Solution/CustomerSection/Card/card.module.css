@@ -44,6 +44,9 @@
   line-height: 19.2px;
   letter-spacing: -0.02em;
   text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .job {
@@ -73,15 +76,15 @@
 
 @media (max-width: 1400px) {
   .card {
-    width: 200px;
-    height: 360px;
+    width: 264px;
+    height: 430px;
   }
 }
 
 @media (max-width: 900px) {
   .card {
-    width: 145px;
-    height: 300px;
+    width: 250px;
+    height: 360px;
   }
 
   .infomation {
@@ -91,26 +94,189 @@
   }
 
   .avatar {
-    width: 30px;
-    height: 30px;
-  }
-
-  .box {
-    gap: 4px;
-  }
-
-  .name {
-    font-size: 14px;
-  }
-
-  .job {
-    font-size: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
 
-@media (max-width: 480px) {
+@media (width: 1280px) {
   .card {
-    width: 120px;
-    height: 230px;
+    width: 273px;
+    height: 430px;
+  }
+}
+
+@media (width: 1180px) {
+  .card {
+    width: 260px;
+    height: 430px;
+  }
+}
+
+@media (width: 1114px) {
+  .card {
+    width: 244px;
+    height: 425px;
+  }
+}
+
+@media (width: 1104px) {
+  .card {
+    width: 240px;
+    height: 380px;
+  }
+}
+
+@media (width: 1024px) {
+  .card {
+    width: 220px;
+    height: 430px;
+  }
+}
+
+@media (width: 915px) {
+  .card {
+    width: 203px;
+    height: 305px;
+  }
+}
+
+@media (width: 880px) {
+  .card {
+    width: 195px;
+    height: 300px;
+  }
+}
+
+@media (width: 851px) {
+  .card {
+    width: 187px;
+    height: 300px;
+  }
+}
+
+@media (width: 834px) {
+  .card {
+    width: 248px;
+    height: 360px;
+  }
+}
+
+@media (width: 820px) {
+  .card {
+    width: 244px;
+    height: 360px;
+  }
+}
+
+@media (width: 806px) {
+  .card {
+    width: 242px;
+    height: 365px;
+  }
+}
+
+@media (width: 804px) {
+  .card {
+    width: 176px;
+    height: 290px;
+  }
+}
+
+@media (width: 800px) {
+  .card {
+    width: 237px;
+    height: 340px;
+  }
+}
+
+@media (width: 780px) {
+  .card {
+    width: 170px;
+    height: 300px;
+  }
+}
+
+@media (width: 768px) {
+  .card {
+    width: 226px;
+    height: 340px;
+  }
+}
+
+@media (width: 760px) {
+  .card {
+    width: 226px;
+    height: 340px;
+  }
+}
+
+@media (width: 731px) {
+  .card {
+    width: 217px;
+    height: 320px;
+  }
+}
+
+@media (width: 702px) {
+  .card {
+    width: 207px;
+    height: 320px;
+  }
+}
+
+@media (width: 428px) {
+  .card {
+    width: 184px;
+    height: 310px;
+  }
+}
+
+@media (width: 414px) {
+  .card {
+    width: 177px;
+    height: 295px;
+  }
+}
+
+@media (width: 412px) {
+  .card {
+    width: 175px;
+    height: 295px;
+  }
+}
+
+@media (width: 393px) {
+  .card {
+    width: 166px;
+    height: 295px;
+  }
+}
+
+@media (width: 390px) {
+  .card {
+    width: 165px;
+    height: 295px;
+  }
+}
+
+@media (width: 375px) {
+  .card {
+    width: 157px;
+    height: 295px;
+  }
+}
+
+@media (width: 360px) {
+  .card {
+    width: 150px;
+    height: 295px;
+  }
+}
+
+@media (width: 320px) {
+  .card {
+    width: 130px;
+    height: 215px;
   }
 }
