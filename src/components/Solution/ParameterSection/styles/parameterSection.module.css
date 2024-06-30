@@ -131,6 +131,10 @@
   }
 }
 
+.header_responsive {
+  display: none;
+}
+
 .box_end_header {
   font-size: 48px;
   font-weight: 400;
